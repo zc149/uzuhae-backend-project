@@ -12,7 +12,7 @@ import java.io.File;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-@Table(name = "cardinfo")
+@Table(name = "card_info")
 //카드정보
 public class CardInfo {
 

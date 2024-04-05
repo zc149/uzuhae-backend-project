@@ -8,8 +8,10 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-@Table(name = "subscribeinfo")
+@Table(name = "subscribe_info")
 @Builder
+//@RequiredArgsConstructor
+//@AllArgsConstructor
 //구독정보
 public class SubscribeInfo {
 
@@ -34,7 +36,6 @@ public class SubscribeInfo {
     @Singular
     private List<SubscribeBenefit> subscribeBenefits;
 
-
     public SubscribeInfo(Long id, String title, String fee, CompanyInfo companyInfo, String category, List<SubscribeBenefit> subscribeBenefits) {
         this.id = id;
         this.title = title;
@@ -43,4 +44,5 @@ public class SubscribeInfo {
         this.category = category;
         this.subscribeBenefits = subscribeBenefits;
     }
+
 }

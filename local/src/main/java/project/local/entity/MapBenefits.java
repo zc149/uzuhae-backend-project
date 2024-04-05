@@ -7,7 +7,7 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-@Table(name = "mapbenefits")
+@Table(name = "map_benefits")
 //카드혜택(지도상세)
 public class MapBenefits {
 

@@ -8,7 +8,7 @@ import java.sql.Date;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-@Table(name = "questioncontent")
+@Table(name = "question_content")
 //문의내역
 public class QuestionContent {
 
