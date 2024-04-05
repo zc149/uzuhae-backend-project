@@ -9,7 +9,7 @@ import java.sql.Date;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-@Table(name = "mapsearch")
+@Table(name = "map_search")
 //지도검색
 public class MapSearch {
 

@@ -9,7 +9,7 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-@Table(name = "userinfo")
+@Table(name = "user_info")
 @Builder
 //회원정보
 public class UserInfo {

@@ -1,4 +1,6 @@
 package project.local.service;
 
-public class UserDetailService {
+public class MapServiceImpl {
+
+
 }

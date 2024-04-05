@@ -13,7 +13,7 @@ import java.sql.Date;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-@Table(name = "usercard")
+@Table(name = "user_card")
 public class UserCard {
 
     @Id

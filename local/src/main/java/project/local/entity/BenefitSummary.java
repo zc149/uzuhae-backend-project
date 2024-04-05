@@ -7,7 +7,7 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-@Table(name = "benefitsummary")
+@Table(name = "benefit_summary")
 //카드혜택요약(카드검색)
 public class BenefitSummary {
 

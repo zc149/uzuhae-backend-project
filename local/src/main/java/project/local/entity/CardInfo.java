@@ -12,13 +12,16 @@ import java.io.File;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-@Table(name = "cardinfo")
+@Table(name = "card_info")
 //카드정보
 public class CardInfo {
 
     @Id
     @Column(name = "CARDINFO_ID",nullable = false)
     private Long id;
+
+    @Column(name = "CARD_NAME", nullable = false)
+    private String cardName;
 
     @Column(name = "CARDINFO_CARDTYPE",nullable = false)
     private String cardType;
@@ -38,8 +41,9 @@ public class CardInfo {
 
     @Builder
 
-    public CardInfo(Long id, String cardType, String annualFee, String previousAmount, CompanyInfo companyInfo, String imageURL) {
+    public CardInfo(Long id, String cardName, String cardType, String annualFee, String previousAmount, CompanyInfo companyInfo, String imageURL) {
         this.id = id;
+        this.cardName = cardName;
         this.cardType = cardType;
         this.annualFee = annualFee;
         this.previousAmount = previousAmount;

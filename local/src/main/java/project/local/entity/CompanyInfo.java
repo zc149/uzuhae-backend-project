@@ -9,7 +9,7 @@ import java.util.List;
 @Getter
 @Builder
 @Entity
-@Table(name = "companyinfo")
+@Table(name = "company_info")
 //카드사정보
 public class CompanyInfo {
 
