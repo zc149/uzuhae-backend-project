@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import project.local.entity.CardInfo;
+import project.local.entity.Card;
 import project.local.service.CardServiceImpl;
 
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class CardController {
         List<String> benefitList = Arrays.asList(benefits.split(","));
 //        List<String> benefitList = benefits.isEmpty() ? Collections.emptyList() : Arrays.asList(benefits.split(","));
 
-        List<CardInfo> forCount = new ArrayList<>();
+        List<Card> forCount = new ArrayList<>();
         if (cardType.isEmpty() && benefits.isEmpty()) {
             forCount = cardService.countA();
 

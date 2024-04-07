@@ -8,10 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-@Table(name = "faq")
+@Table(name = "FAQ")
 //FAQ
 public class Faq {
 
@@ -25,18 +27,10 @@ public class Faq {
     @Column(name = "FAQ_CONTENT",nullable = false)
     private String content;
 
-    @Column(name = "FAQ_VIEW",nullable = false)
+    @Column(name = "FAQ_VIEWS",nullable = false)
     private int view;
 
     @Column(name = "FAQ_CATEGORY",nullable = false)
     private String category;
 
-    @Builder
-    public Faq(Long id, String title, String content, int view, String category) {
-        this.id = id;
-        this.title = title;
-        this.content = content;
-        this.view = view;
-        this.category = category;
-    }
 }
