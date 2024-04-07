@@ -2,8 +2,8 @@ package project.local.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import project.local.entity.BenefitSummary;
-import project.local.entity.CardInfo;
+import project.local.entity.cardInfo.CardBenefits;
+import project.local.entity.cardInfo.Card;
 import project.local.repository.mypage.BenefitSummaryRepository;
 import project.local.repository.mypage.CardInfoRepository;
 
@@ -18,23 +18,23 @@ public class CardServiceImpl {
     private final BenefitSummaryRepository benefitSummaryRepository;
 //    List<CardInfo> forCount = new ArrayList<>();
 
-    public List<CardInfo> countA() {
+    public List<Card> countA() {
         return cardInfoRepository.findAll();
     }
 
-    public List<CardInfo> countB(String cardType) {
-        List<CardInfo> byCardTypes = cardInfoRepository.findByCardType(cardType);
+    public List<Card> countB(String cardType) {
+        List<Card> byCardTypes = cardInfoRepository.findByCardType(cardType);
 
         return byCardTypes;
     }
 
-    public List<CardInfo> countC(String cardType, List<String> benefitList) {
-        List<CardInfo> byCardTypes = cardInfoRepository.findByCardType(cardType);
-        List<CardInfo> forCount = new ArrayList<>();
+    public List<Card> countC(String cardType, List<String> benefitList) {
+        List<Card> byCardTypes = cardInfoRepository.findByCardType(cardType);
+        List<Card> forCount = new ArrayList<>();
         for (int i = 0; i < benefitList.size(); i++) {
-            List<BenefitSummary> byBenefitTitles = benefitSummaryRepository.findByBenefitTitle(benefitList.get(i));
-            for (BenefitSummary byBenefitTitle : byBenefitTitles) {
-                for (CardInfo byCardType : byCardTypes) {
+            List<CardBenefits> byBenefitTitles = benefitSummaryRepository.findByBenefitTitle(benefitList.get(i));
+            for (CardBenefits byBenefitTitle : byBenefitTitles) {
+                for (Card byCardType : byCardTypes) {
                     if (byBenefitTitle.getId() == byCardType.getId()) {
                         forCount.add(byCardType);
                     }

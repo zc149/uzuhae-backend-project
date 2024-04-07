@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import project.local.dto.CardInfoListDTO;
 import project.local.dto.ChargeDetailListDTO;
 import project.local.dto.MypageDTO;
-import project.local.entity.CardInfo;
-import project.local.entity.UserInfo;
+import project.local.entity.cardInfo.Card;
+import project.local.entity.userInfo.User;
 import project.local.repository.mypage.CardInfoRepository;
 import project.local.repository.mypage.UserInfoRepository;
 
@@ -35,7 +35,7 @@ public class MyPageServiceImpl {
     // 회원 찾고 그 회원의 보유 카드 찾기
     public String findUser(int id) {
 //        Optional<UserInfo> byId = userInfoRepository.findById(id);
-        UserInfo userInfo = userInfoRepository.findById(id).orElse(null);
+        User userInfo = userInfoRepository.findById(id).orElse(null);
 //        List<UserCard> byUserInfoId = userCardRepository.findByUserInfo_Id(userInfo.getId());
         String userId = String.valueOf(userInfo.getId());
 
@@ -99,8 +99,8 @@ public class MyPageServiceImpl {
         totalAmount = restaurant + cafe + gasStation + etc;
 
         for (CardInfoListDTO cardInfo : cardInfos) {
-            CardInfo localCardInfo = cardInfoRepository.findById(cardInfo.getId()).orElse(null);
-            images.add(localCardInfo.getImageURL());
+            Card localCardInfo = cardInfoRepository.findById(cardInfo.getId()).orElse(null);
+            images.add(localCardInfo.getCardImage());
         }
 
         MypageDTO mypageDTO = new MypageDTO(totalAmount, restaurant, cafe, gasStation, etc, images);
