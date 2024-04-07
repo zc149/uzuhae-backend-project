@@ -2,8 +2,8 @@ package project.local.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import project.local.entity.CardBenefits;
-import project.local.entity.Card;
+import project.local.entity.cardInfo.CardBenefits;
+import project.local.entity.cardInfo.Card;
 import project.local.repository.mypage.BenefitSummaryRepository;
 import project.local.repository.mypage.CardInfoRepository;
 

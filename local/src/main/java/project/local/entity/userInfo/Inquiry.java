@@ -1,4 +1,4 @@
-package project.local.entity;
+package project.local.entity.userInfo;
 
 import lombok.*;
 
@@ -39,8 +39,5 @@ public class Inquiry {
 
     @Column(name = "INQUIRY_VIEWS", nullable = false)
     private int views;
-
-    @OneToOne(mappedBy = "inquiry", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private InquiryResponse inquiryResponse;
 
 }

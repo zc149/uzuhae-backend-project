@@ -1,4 +1,4 @@
-package project.local.entity;
+package project.local.entity.userInfo;
 
 import lombok.*;
 
@@ -15,10 +15,10 @@ import java.sql.Date;
 public class SearchHistory {
 
     @Id
-    @Column(name = "SEARCH_HISTORY_ID",nullable = false)
+    @Column(name = "SEARCH_HISTORY_ID", nullable = false)
     private Long id;
 
-    @Column(name = "SEARCH_HISTORY",nullable = false)
+    @Column(name = "SEARCH_HISTORY", nullable = false)
     private String searchContents;
 
     @Column(name = "SEARCH_DATE", nullable = false)

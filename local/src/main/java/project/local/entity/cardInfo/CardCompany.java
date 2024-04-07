@@ -1,4 +1,4 @@
-package project.local.entity;
+package project.local.entity.cardInfo;
 
 import lombok.*;
 
@@ -12,10 +12,10 @@ import java.util.List;
 @Entity
 @Table(name = "CARD_COMPANY")
 //카드사정보
-public class    CardCompany {
+public class CardCompany {
 
     @Id
-    @Column(name= "COMPANY_NAME", nullable = false)
+    @Column(name = "COMPANY_NAME", nullable = false)
     private String id;
 
     @Column(name = "CARD_QUANTITY", nullable = false)
@@ -24,12 +24,12 @@ public class    CardCompany {
     @Column(name = "SUBSCRIPTION_QUANTITY", nullable = false)
     private int subscriptionQuantity;
 
-    @OneToMany(mappedBy = "cardCompany", cascade = CascadeType.ALL, orphanRemoval = true)
-    @Singular
-    private List<Card> cards;
-
-    @OneToMany(mappedBy = "cardCompany", cascade = CascadeType.ALL, orphanRemoval = true)
-    @Singular
-    private List<SubscriptionBenefits> subscriptionBenefits;
+//    @OneToMany(mappedBy = "cardCompany", cascade = CascadeType.ALL, orphanRemoval = true)
+//    @Singular
+//    private List<Card> cards;
+//
+//    @OneToMany(mappedBy = "cardCompany", cascade = CascadeType.ALL, orphanRemoval = true)
+//    @Singular
+//    private List<SubscriptionBenefits> subscriptionBenefits;
 
 }

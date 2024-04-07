@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import project.local.entity.Card;
+import project.local.entity.cardInfo.Card;
 import project.local.service.CardServiceImpl;
 
 import java.util.ArrayList;

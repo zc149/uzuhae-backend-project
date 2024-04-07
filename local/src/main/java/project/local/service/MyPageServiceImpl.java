@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import project.local.dto.CardInfoListDTO;
 import project.local.dto.ChargeDetailListDTO;
 import project.local.dto.MypageDTO;
-import project.local.entity.Card;
-import project.local.entity.User;
+import project.local.entity.cardInfo.Card;
+import project.local.entity.userInfo.User;
 import project.local.repository.mypage.CardInfoRepository;
 import project.local.repository.mypage.UserInfoRepository;
 

@@ -1,9 +1,9 @@
-package project.local.entity;
+package project.local.entity.cardInfo;
 
 import lombok.*;
+import project.local.entity.cardInfo.CardCompany;
 
 import javax.persistence.*;
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -18,16 +18,16 @@ public class SubscriptionBenefits {
     @Column(name = "SUBSCRIPTION_ID", nullable = false)
     private Long id;
 
-    @Column(name = "SUBSCRIPTION_CATEGORY",nullable = false)
+    @Column(name = "SUBSCRIPTION_CATEGORY", nullable = false)
     private String category;
 
-    @Column(name = "SUBSCRIPTION_TITLE",nullable = false)
+    @Column(name = "SUBSCRIPTION_TITLE", nullable = false)
     private String title;
 
-    @Column(name = "SUBSCRIPTION_SUMMARY",nullable = false)
+    @Column(name = "SUBSCRIPTION_SUMMARY", nullable = false)
     private String summary;
 
-    @Column(name = "SUBSCRIPTION_FEE",nullable = false)
+    @Column(name = "SUBSCRIPTION_FEE", nullable = false)
     private String fee;
 
     @ManyToOne(fetch = FetchType.LAZY)

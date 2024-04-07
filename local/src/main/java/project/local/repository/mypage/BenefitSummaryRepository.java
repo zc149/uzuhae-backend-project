@@ -1,7 +1,7 @@
 package project.local.repository.mypage;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import project.local.entity.CardBenefits;
+import project.local.entity.cardInfo.CardBenefits;
 
 import java.util.List;
 
