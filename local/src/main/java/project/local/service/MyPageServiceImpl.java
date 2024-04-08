@@ -34,9 +34,7 @@ public class MyPageServiceImpl {
 
     // 회원 찾고 그 회원의 보유 카드 찾기
     public String findUser(int id) {
-//        Optional<UserInfo> byId = userInfoRepository.findById(id);
         User userInfo = userRepository.findById(id).orElse(null);
-//        List<UserCard> byUserInfoId = userCardRepository.findByUserInfo_Id(userInfo.getId());
         String userId = String.valueOf(userInfo.getId());
 
         return userId;
