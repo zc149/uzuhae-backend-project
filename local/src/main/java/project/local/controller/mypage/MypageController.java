@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import project.local.dto.CardInfoListDTO;
+import project.local.dto.CardsDTO;
 import project.local.dto.ChargeDetailListDTO;
 import project.local.dto.MypageDTO;
 import project.local.service.MyPageServiceImpl;
@@ -25,7 +25,7 @@ public class MypageController {
 
         // 이제 user객체를 가지고? id만 헤더에 넣어서? HttpClient로 Mydata api에 요청!
         List<ChargeDetailListDTO> billsDetailDTOs = myPageService.reqeustCharges(userId);
-        List<CardInfoListDTO> cardInfoListDTOs = myPageService.reqeustCards(userId);
+        List<CardsDTO> cardInfoListDTOs = myPageService.reqeustCards(userId);
 
         MypageDTO mypageDTO = myPageService.responseMypage(billsDetailDTOs, cardInfoListDTOs);
 
