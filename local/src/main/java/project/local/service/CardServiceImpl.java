@@ -4,8 +4,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import project.local.entity.cardInfo.CardBenefits;
 import project.local.entity.cardInfo.Card;
-import project.local.repository.mypage.BenefitSummaryRepository;
-import project.local.repository.mypage.CardInfoRepository;
+import project.local.repository.mypage.CardBenefitsRepository;
+import project.local.repository.mypage.CardRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,25 +14,23 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CardServiceImpl {
 
-    private final CardInfoRepository cardInfoRepository;
-    private final BenefitSummaryRepository benefitSummaryRepository;
+    private final CardRepository cardRepository;
+    private final CardBenefitsRepository cardBenefitsRepository;
 //    List<CardInfo> forCount = new ArrayList<>();
 
-    public List<Card> countA() {
-        return cardInfoRepository.findAll();
+    public List<Card> countAll() {
+        return cardRepository.findAll();
     }
 
-    public List<Card> countB(String cardType) {
-        List<Card> byCardTypes = cardInfoRepository.findByCardType(cardType);
-
-        return byCardTypes;
+    public List<Card> countByTypes(String cardType) {
+        return cardRepository.findByCardType(cardType);
     }
 
-    public List<Card> countC(String cardType, List<String> benefitList) {
-        List<Card> byCardTypes = cardInfoRepository.findByCardType(cardType);
+    public List<Card> countByTypesAndBenefits(String cardType, List<String> benefitList) {
+        List<Card> byCardTypes = cardRepository.findByCardType(cardType);
         List<Card> forCount = new ArrayList<>();
         for (int i = 0; i < benefitList.size(); i++) {
-            List<CardBenefits> byBenefitTitles = benefitSummaryRepository.findByBenefitTitle(benefitList.get(i));
+            List<CardBenefits> byBenefitTitles = cardBenefitsRepository.findByBenefitTitle(benefitList.get(i));
             for (CardBenefits byBenefitTitle : byBenefitTitles) {
                 for (Card byCardType : byCardTypes) {
                     if (byBenefitTitle.getId() == byCardType.getId()) {

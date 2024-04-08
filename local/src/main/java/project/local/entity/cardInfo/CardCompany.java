@@ -18,11 +18,8 @@ public class CardCompany {
     @Column(name = "COMPANY_NAME", nullable = false)
     private String id;
 
-    @Column(name = "CARD_QUANTITY", nullable = false)
-    private int cardQuantity;
-
-    @Column(name = "SUBSCRIPTION_QUANTITY", nullable = false)
-    private int subscriptionQuantity;
+    @Column(name = "LOCATION", nullable = true)
+    private String location;
 
 //    @OneToMany(mappedBy = "cardCompany", cascade = CascadeType.ALL, orphanRemoval = true)
 //    @Singular

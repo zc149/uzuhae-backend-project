@@ -30,13 +30,13 @@ public class CardController {
 
         List<Card> forCount = new ArrayList<>();
         if (cardType.isEmpty() && benefits.isEmpty()) {
-            forCount = cardService.countA();
+            forCount = cardService.countAll();
 
         } else if (!cardType.isEmpty() && benefits.isEmpty()) {
-            forCount = cardService.countB(cardType);
+            forCount = cardService.countByTypes(cardType);
 
         } else if (!cardType.isEmpty() && !benefits.isEmpty()) {
-            forCount = cardService.countC(cardType, benefitList);
+            forCount = cardService.countByTypesAndBenefits(cardType, benefitList);
         }
 
         return forCount.size();

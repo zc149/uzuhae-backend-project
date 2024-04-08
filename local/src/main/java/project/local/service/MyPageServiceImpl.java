@@ -4,13 +4,13 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import project.local.dto.CardInfoListDTO;
+import project.local.dto.CardsDTO;
 import project.local.dto.ChargeDetailListDTO;
 import project.local.dto.MypageDTO;
 import project.local.entity.cardInfo.Card;
 import project.local.entity.userInfo.User;
-import project.local.repository.mypage.CardInfoRepository;
-import project.local.repository.mypage.UserInfoRepository;
+import project.local.repository.mypage.CardRepository;
+import project.local.repository.mypage.UserRepository;
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -23,20 +23,18 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MyPageServiceImpl {
 
-    private final UserInfoRepository userInfoRepository;
-    private final CardInfoRepository cardInfoRepository;
+    private final UserRepository userRepository;
+    private final CardRepository cardRepository;
 
     private final HttpClient httpClient = HttpClient.newHttpClient();
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     List<ChargeDetailListDTO> billsDetails;
-    List<CardInfoListDTO> cardInfos;
+    List<CardsDTO> cardInfos;
 
     // 회원 찾고 그 회원의 보유 카드 찾기
     public String findUser(int id) {
-//        Optional<UserInfo> byId = userInfoRepository.findById(id);
-        User userInfo = userInfoRepository.findById(id).orElse(null);
-//        List<UserCard> byUserInfoId = userCardRepository.findByUserInfo_Id(userInfo.getId());
+        User userInfo = userRepository.findById(id).orElse(null);
         String userId = String.valueOf(userInfo.getId());
 
         return userId;
@@ -59,7 +57,7 @@ public class MyPageServiceImpl {
     }
 
 
-    public List<CardInfoListDTO> reqeustCards(String userId) throws Exception {
+    public List<CardsDTO> reqeustCards(String userId) throws Exception {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("http://192.168.0.65:8080/v2/card/cards"))
                 .header("userId", userId) // 헤더에 userId 추가
@@ -69,13 +67,13 @@ public class MyPageServiceImpl {
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 
         // JSON 응답을 BillsDetailDTO 리스트로 변환
-        cardInfos = objectMapper.readValue(response.body(), new TypeReference<List<CardInfoListDTO>>() {
+        cardInfos = objectMapper.readValue(response.body(), new TypeReference<List<CardsDTO>>() {
         });
 
         return cardInfos;
     }
 
-    public MypageDTO responseMypage(List<ChargeDetailListDTO> billsDetails, List<CardInfoListDTO> cardInfos) {
+    public MypageDTO responseMypage(List<ChargeDetailListDTO> billsDetails, List<CardsDTO> cardInfos) {
         int totalAmount = 0;
         int restaurant = 0;
         int cafe = 0;
@@ -98,8 +96,8 @@ public class MyPageServiceImpl {
         }
         totalAmount = restaurant + cafe + gasStation + etc;
 
-        for (CardInfoListDTO cardInfo : cardInfos) {
-            Card localCardInfo = cardInfoRepository.findById(cardInfo.getId()).orElse(null);
+        for (CardsDTO cardInfo : cardInfos) {
+            Card localCardInfo = cardRepository.findById(cardInfo.getId()).orElse(null);
             images.add(localCardInfo.getCardImage());
         }
 

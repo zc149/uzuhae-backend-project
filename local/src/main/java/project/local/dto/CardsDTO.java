@@ -7,7 +7,7 @@ import lombok.ToString;
 @Getter
 @ToString
 @NoArgsConstructor
-public class CardInfoListDTO {
+public class CardsDTO {
 
     private Long id;
     private String cardNum;
