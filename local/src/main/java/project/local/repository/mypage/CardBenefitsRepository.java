@@ -6,6 +6,9 @@ import project.local.entity.cardInfo.CardBenefits;
 import java.util.List;
 
 public interface CardBenefitsRepository extends JpaRepository<CardBenefits, Long> {
-    List<CardBenefits> findByBenefitTitle(String benefitTitle);
+    List<CardBenefits> findByCategory(String benefitTitle);
+
+    List<CardBenefits> findByCard_Id(Long cardId);
+
 }
 

@@ -1,10 +1,12 @@
 package project.local.controller.card;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import project.local.dto.BillsDTO;
+import project.local.dto.CardDetailsDTO;
+import project.local.dto.SearchDTO;
 import project.local.entity.cardInfo.Card;
 import project.local.service.CardServiceImpl;
 
@@ -40,5 +42,10 @@ public class CardController {
         }
 
         return forCount.size();
+    }
+
+    @PostMapping
+    public List<CardDetailsDTO> cardDetails(@RequestBody SearchDTO searchDTO) {
+        return cardService.findCardDetails(searchDTO);
     }
 }
