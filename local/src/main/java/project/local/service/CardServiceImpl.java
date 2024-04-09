@@ -2,8 +2,8 @@ package project.local.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import project.local.dto.local.LocalCardBenefitsDTO;
 import project.local.entity.cardInfo.CardBenefits;
-import project.local.entity.cardInfo.Card;
 import project.local.repository.mypage.CardBenefitsRepository;
 import project.local.repository.mypage.CardRepository;
 
@@ -16,32 +16,28 @@ public class CardServiceImpl {
 
     private final CardRepository cardRepository;
     private final CardBenefitsRepository cardBenefitsRepository;
-//    List<CardInfo> forCount = new ArrayList<>();
 
-    public List<Card> countAll() {
-        return cardRepository.findAll();
-    }
 
-    public List<Card> countByTypes(String cardType) {
-        return cardRepository.findByCardType(cardType);
-    }
+    // 혜택 데이터 전부 불러오기
+    public List<LocalCardBenefitsDTO> findAllCardBenefit() {
+        List<CardBenefits> cardBenefits = cardBenefitsRepository.findAll();
 
-    public List<Card> countByTypesAndBenefits(String cardType, List<String> benefitList) {
-        List<Card> byCardTypes = cardRepository.findByCardType(cardType);
-        List<Card> forCount = new ArrayList<>();
-        for (int i = 0; i < benefitList.size(); i++) {
-            List<CardBenefits> byBenefitTitles = cardBenefitsRepository.findByBenefitTitle(benefitList.get(i));
-            for (CardBenefits byBenefitTitle : byBenefitTitles) {
-                for (Card byCardType : byCardTypes) {
-                    if (byBenefitTitle.getId() == byCardType.getId()) {
-                        forCount.add(byCardType);
-                    }
-                }
-            }
+        List<LocalCardBenefitsDTO> localCardBenefitsDTOS = new ArrayList<>();
+
+        for (CardBenefits benefit : cardBenefits) {
+            LocalCardBenefitsDTO localCardBenefitsDTO = LocalCardBenefitsDTO.builder()
+                    .id(benefit.getId())
+                    .category(benefit.getCategory())
+                    .cardType(benefit.getCard().getCardType())
+                    .cardId(benefit.getCard().getId()).build();
+
+            localCardBenefitsDTOS.add(localCardBenefitsDTO);
         }
 
-        return forCount;
+
+        return localCardBenefitsDTOS;
     }
+
 
 
 }

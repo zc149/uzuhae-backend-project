@@ -1,44 +1,28 @@
 package project.local.controller.card;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import project.local.entity.cardInfo.Card;
+import project.local.dto.local.LocalCardBenefitsDTO;
 import project.local.service.CardServiceImpl;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @RestController
 @RequestMapping("/woorieodi/card")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:5173/")
 public class CardController {
 
     private final CardServiceImpl cardService;
 
+    // 혜택 클릭시 서칭해야하니까 먼저 전체 데이터를 불러오는거임
     @GetMapping
-    public int findCards(
-            @RequestParam(value = "type", required = false, defaultValue = "") String cardType,
-            @RequestParam(value = "benefits", required = false, defaultValue = "") String benefits
-    ) {
-        // benefits 파라미터를 콤마로 구분된 리스트로 변환
-        List<String> benefitList = Arrays.asList(benefits.split(","));
-//        List<String> benefitList = benefits.isEmpty() ? Collections.emptyList() : Arrays.asList(benefits.split(","));
+    public List<LocalCardBenefitsDTO> findAllCardBenefit() {
+        List<LocalCardBenefitsDTO> cardBenefits = cardService.findAllCardBenefit();
+        return cardBenefits;
 
-        List<Card> forCount = new ArrayList<>();
-        if (cardType.isEmpty() && benefits.isEmpty()) {
-            forCount = cardService.countAll();
-
-        } else if (!cardType.isEmpty() && benefits.isEmpty()) {
-            forCount = cardService.countByTypes(cardType);
-
-        } else if (!cardType.isEmpty() && !benefits.isEmpty()) {
-            forCount = cardService.countByTypesAndBenefits(cardType, benefitList);
-        }
-
-        return forCount.size();
     }
 }
