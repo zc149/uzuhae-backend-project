@@ -21,7 +21,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class MyPageServiceImpl {
+public class MyPageServiceImpl implements MyPageService {
 
     private final UserRepository userRepository;
     private final CardRepository cardRepository;

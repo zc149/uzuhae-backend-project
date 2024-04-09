@@ -2,11 +2,14 @@ package project.local.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import project.local.entity.cardInfo.CardBenefits;
+import project.local.dto.CardDetailsDTO;
+import project.local.dto.SearchDTO;
 import project.local.entity.cardInfo.Card;
+import project.local.entity.cardInfo.CardBenefits;
 import project.local.repository.mypage.CardBenefitsRepository;
 import project.local.repository.mypage.CardRepository;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +19,6 @@ public class CardServiceImpl {
 
     private final CardRepository cardRepository;
     private final CardBenefitsRepository cardBenefitsRepository;
-//    List<CardInfo> forCount = new ArrayList<>();
 
     public List<Card> countAll() {
         return cardRepository.findAll();
@@ -28,20 +30,47 @@ public class CardServiceImpl {
 
     public List<Card> countByTypesAndBenefits(String cardType, List<String> benefitList) {
         List<Card> byCardTypes = cardRepository.findByCardType(cardType);
-        List<Card> forCount = new ArrayList<>();
+        List<Card> forDetails = new ArrayList<>();
         for (int i = 0; i < benefitList.size(); i++) {
-            List<CardBenefits> byBenefitTitles = cardBenefitsRepository.findByBenefitTitle(benefitList.get(i));
-            for (CardBenefits byBenefitTitle : byBenefitTitles) {
+            List<CardBenefits> byCategories = cardBenefitsRepository.findByCategory(benefitList.get(i));
+            for (CardBenefits byCategorie : byCategories) {
                 for (Card byCardType : byCardTypes) {
-                    if (byBenefitTitle.getId() == byCardType.getId()) {
-                        forCount.add(byCardType);
+                    if (byCategorie.getCard().getId() == byCardType.getId()) {
+                        forDetails.add(byCardType);
                     }
                 }
             }
         }
-
-        return forCount;
+        return forDetails;
     }
 
+    public List<CardDetailsDTO> findCardDetails(SearchDTO searchDTO) {
+        List<Long> cardIds = searchDTO.getCardId();
+        List<CardDetailsDTO> cards = new ArrayList<>();
 
+        for (Long cardId : cardIds) {
+            Card card = cardRepository.findById(cardId).orElse(null);
+            List<CardBenefits> byCardIds = cardBenefitsRepository.findByCard_Id(cardId);
+            List<String> benefitTitle = new ArrayList<>();
+            List<String> benefitSummary = new ArrayList<>();
+
+            for (CardBenefits byCardId : byCardIds) {
+                benefitTitle.add(byCardId.getBenefitTitle());
+                benefitSummary.add(byCardId.getBenefitSummary());
+            }
+            cards.add(CardDetailsDTO.builder()
+                    .cardId(card.getId())
+                    .imageURL(card.getCardImage())
+                    .cardName(card.getCardName())
+                    .cardCompany(card.getCardCompany().getId())
+                    .benefitTitle(benefitTitle)
+                    .benefitSummary(benefitSummary)
+                    .annualFee(card.getAnnualFee())
+                    .previousAmount(card.getPreviousAmount())
+//                    .cardURL(card.getCardURL())
+                    .build());
+        }
+
+        return cards;
+    }
 }
