@@ -1,7 +1,6 @@
 package project.local.dto;
 
 import lombok.*;
-
 import java.sql.Date;
 
 @Builder
@@ -19,4 +18,5 @@ public class BillsDetailsDTO {
     private String merchantName;
     private String merchantType;
     private Long chargeId;
+
 }

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
 import project.local.dto.*;
 import project.local.entity.cardInfo.Card;
 import project.local.entity.userInfo.User;
@@ -47,7 +48,7 @@ public class MyPageServiceImpl {
 
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 
-        // JSON 응답을 BillsDetailDTO 리스트로 변환
+        // JSON 응답을 CardsDTO 리스트로 변환
         List<CardsDTO> cards = objectMapper.readValue(response.body(), new TypeReference<List<CardsDTO>>() {
         });
 
@@ -159,7 +160,6 @@ public class MyPageServiceImpl {
             }
 
         }
-
         return MypageDTO.builder()
                 .totalAmount(totalAmount)
                 .restaurant(restaurant)

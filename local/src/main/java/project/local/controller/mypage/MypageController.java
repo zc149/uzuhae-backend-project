@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import project.local.dto.*;
+import project.local.dto.CardsDTO;
+import project.local.dto.MypageDTO;
 import project.local.service.MyPageServiceImpl;
 
 import java.time.LocalDate;
@@ -26,6 +28,9 @@ public class MypageController {
         // id를 header에 넣어서 api 요청 -> 내 카드 리스트 반환
         List<CardsDTO> cardsDTOS = myPageService.requestCards(userId);
 
+        // 이제 user객체를 가지고? id만 헤더에 넣어서? HttpClient로 Mydata api에 요청!
+        List<CardsDTO> cardInfoListDTOs = myPageService.requestCards(userId);
+
         // id를 header에 넣어서 api 요청 -> 내 년, 월 별 청구내역 반환
         List<BillsDTO> billsDTOS = myPageService.requestBills(userId);
 
@@ -34,11 +39,8 @@ public class MypageController {
 
         // id를 header, 년월을 파라미터로 api 요청 -> 특정 달의 청구 상세내역 반환
         List<BillsDetailsDTO> billsDetailsDTOS = myPageService.requestBillsDetails(userId, dto.getMonth());
-        System.out.println("billsDetailsDTOS = " + billsDetailsDTOS);
 
-        MypageDTO mypageDTO = myPageService.responseMypage(cardsDTOS, dto.getTotalAmount(), billsDetailsDTOS);
-
-        return mypageDTO;
+        return myPageService.responseMypage(cardsDTOS, dto.getTotalAmount(), billsDetailsDTOS);
     }
 
 }

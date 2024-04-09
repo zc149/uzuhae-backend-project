@@ -1,7 +1,6 @@
 package project.local.dto;
 
 import lombok.*;
-
 import java.sql.Date;
 
 @Builder
@@ -21,4 +20,5 @@ public class CardsDTO {
     private Date expirationDate;
     private int minimumUsage;
     private Long userId;
+
 }
