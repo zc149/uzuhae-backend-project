@@ -10,8 +10,7 @@ import project.local.repository.mypage.CardBenefitsRepository;
 import project.local.repository.mypage.CardRepository;
 
 import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -30,18 +29,21 @@ public class CardServiceImpl {
 
     public List<Card> countByTypesAndBenefits(String cardType, List<String> benefitList) {
         List<Card> byCardTypes = cardRepository.findByCardType(cardType);
-        List<Card> forDetails = new ArrayList<>();
+
         for (int i = 0; i < benefitList.size(); i++) {
+            List<Card> forDetails = new ArrayList<>();
             List<CardBenefits> byCategories = cardBenefitsRepository.findByCategory(benefitList.get(i));
-            for (CardBenefits byCategorie : byCategories) {
+            for (CardBenefits byCategory : byCategories) {
                 for (Card byCardType : byCardTypes) {
-                    if (byCategorie.getCard().getId() == byCardType.getId()) {
+                    if (byCategory.getCard().getId() == byCardType.getId()) {
                         forDetails.add(byCardType);
                     }
                 }
             }
+            byCardTypes = forDetails;
         }
-        return forDetails;
+
+        return byCardTypes;
     }
 
     public List<CardDetailsDTO> findCardDetails(SearchDTO searchDTO) {
