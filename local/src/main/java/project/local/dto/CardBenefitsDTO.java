@@ -1,14 +1,14 @@
 package project.local.dto;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.List;
 
+@Builder
 @Getter
 @ToString
 @NoArgsConstructor
+@AllArgsConstructor
 public class CardBenefitsDTO {
 
     private String type;
