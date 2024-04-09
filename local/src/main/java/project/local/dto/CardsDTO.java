@@ -1,18 +1,24 @@
 package project.local.dto;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
+import java.sql.Date;
+
+@Builder
 @Getter
 @ToString
 @NoArgsConstructor
+@AllArgsConstructor
 public class CardsDTO {
 
-    private Long id;
-    private String cardNum;
-    private String cardGood;
-    private String cardKind;
-    private String cardCompany;
-    private String yearFee;
+    private Long cardId;
+    private String cardNumber;
+    private String cardName;
+    private String cardType;
+    private String cardBrand;
+    private int annualFee;
+    private Date issueDate;
+    private Date expirationDate;
+    private int minimumUsage;
+    private Long userId;
 }
