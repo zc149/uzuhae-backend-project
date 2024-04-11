@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import project.local.dto.local.LocalCardBenefitsDTO;
+import org.springframework.web.bind.annotation.*;
+import project.local.dto.CardDetailsDTO;
+import project.local.dto.SearchDTO;
 import project.local.service.CardServiceImpl;
 
 import java.util.List;
@@ -24,5 +27,10 @@ public class CardController {
         List<LocalCardBenefitsDTO> cardBenefits = cardService.findAllCardBenefit();
         return cardBenefits;
 
+    }
+
+    @PostMapping
+    public List<CardDetailsDTO> cardDetails(@RequestBody SearchDTO searchDTO) {
+        return cardService.findCardDetails(searchDTO);
     }
 }

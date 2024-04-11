@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import project.local.dto.*;
 import project.local.entity.cardInfo.Card;
 import project.local.entity.userInfo.User;
-import project.local.repository.mypage.CardRepository;
-import project.local.repository.mypage.UserRepository;
+import project.local.repository.CardRepository;
+import project.local.repository.UserRepository;
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -21,7 +21,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class MyPageServiceImpl {
+public class MyPageServiceImpl implements MyPageService {
 
     private final UserRepository userRepository;
     private final CardRepository cardRepository;
