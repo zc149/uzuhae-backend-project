@@ -2,35 +2,33 @@ package project.local.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import project.local.dto.mypage.CardsDTO;
-import project.local.dto.mypage.RecommendedSubDTO;
+import project.local.dto.mydata.CardsDTO;
+import project.local.dto.mypage.MySubscriptionDTO;
 import project.local.dto.mypage.SpentAmountDTO;
 import project.local.entity.cardInfo.SubscriptionBenefits;
-import project.local.repository.CardRepository;
 import project.local.repository.SubscriptionRepository;
-import project.local.repository.UserRepository;
+import project.local.service.inter.SubscriptionService;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class SubscriptionServiceImpl {
+public class SubscriptionServiceImpl implements SubscriptionService {
 
-    private final UserRepository userRepository;
-    private final CardRepository cardRepository;
     private final SubscriptionRepository subscriptionRepository;
 
     // 내 카드 리스트에서 id가져와서 으데 카드산지 뽑아서 구독 서비스 중 해당 카드사만 ㄱㄱ
-    public List<RecommendedSubDTO> recommendSub(SpentAmountDTO spentAmountDTO, List<CardsDTO> cards) {
+    @Override
+    public List<MySubscriptionDTO> recommendSub(SpentAmountDTO spentAmountDTO, List<CardsDTO> cards) {
         String maxCategory = spentAmountDTO.getMaxCategory();
         List<SubscriptionBenefits> subscriptionLists = subscriptionRepository.findByCategory(maxCategory);
-        List<RecommendedSubDTO> recommendedSubDTOs = new ArrayList<>();
+        List<MySubscriptionDTO> recommendedSubDTOs = new ArrayList<>();
 
         for (SubscriptionBenefits subscriptionList : subscriptionLists) {
             for (CardsDTO card : cards) {
                 if (card.getCardBrand().equals(subscriptionList.getCardCompany().getId())) {
-                    recommendedSubDTOs.add(RecommendedSubDTO.builder()
+                    recommendedSubDTOs.add(MySubscriptionDTO.builder()
                             .category(subscriptionList.getCategory())
                             .title(subscriptionList.getTitle())
                             .summary(subscriptionList.getSummary())

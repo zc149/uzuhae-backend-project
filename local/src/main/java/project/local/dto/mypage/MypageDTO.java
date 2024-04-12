@@ -1,6 +1,7 @@
 package project.local.dto.mypage;
 
 import lombok.*;
+import project.local.dto.mydata.SubscriptionDTO;
 
 import java.util.List;
 
@@ -17,8 +18,9 @@ public class MypageDTO {
     // 내 카드 리스트
     private List<String> images;
 
-    private List<RecommendedSubDTO> recommendedSubDTO;
-
     private List<MySubscriptionDTO> mySubscriptionDTO;
+
+    private List<MySubscriptionDTO> recommendedSubDTO;
+
 
 }
