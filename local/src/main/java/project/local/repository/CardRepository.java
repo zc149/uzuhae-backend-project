@@ -9,5 +9,5 @@ import java.util.List;
 public interface CardRepository extends JpaRepository<Card, Long> {
     List<Card> findByCardType(String cardType);
 
-//    List<Card> findByIdLessThan(Long cursorId, Pageable pageable);
+//    List<Card> findByIdGreaterThan(Long cursorId, Pageable pageable);
 }

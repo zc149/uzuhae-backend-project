@@ -21,6 +21,9 @@ public class CardCompany {
     @Column(name = "LOCATION", nullable = true)
     private String location;
 
+    @Column(name = "CARD_COMPANY_IMAGE", nullable = false)
+    private String image;
+
 //    @OneToMany(mappedBy = "cardCompany", cascade = CascadeType.ALL, orphanRemoval = true)
 //    @Singular
 //    private List<Card> cards;

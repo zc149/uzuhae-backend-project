@@ -3,14 +3,12 @@ package project.local.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import project.local.dto.local.LocalCardBenefitsDTO;
-import project.local.dto.CardDetailsDTO;
-import project.local.dto.SearchDTO;
-import project.local.entity.cardInfo.Card;
 import project.local.entity.cardInfo.CardBenefits;
 import project.local.repository.CardBenefitsRepository;
 import project.local.repository.CardRepository;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -39,35 +37,4 @@ public class CardServiceImpl {
 
         return localCardBenefitsDTOS;
     }
-
-    public List<CardDetailsDTO> findCardDetails(SearchDTO searchDTO) {
-        List<Long> cardIds = searchDTO.getCardId();
-        List<CardDetailsDTO> cards = new ArrayList<>();
-
-        for (Long cardId : cardIds) {
-            Card card = cardRepository.findById(cardId).orElse(null);
-            List<CardBenefits> byCardIds = cardBenefitsRepository.findByCard_Id(cardId);
-            List<String> benefitTitle = new ArrayList<>();
-            List<String> benefitSummary = new ArrayList<>();
-
-            for (CardBenefits byCardId : byCardIds) {
-                benefitTitle.add(byCardId.getBenefitTitle());
-                benefitSummary.add(byCardId.getBenefitSummary());
-            }
-            cards.add(CardDetailsDTO.builder()
-                    .cardId(card.getId())
-                    .imageURL(card.getCardImage())
-                    .cardName(card.getCardName())
-                    .cardCompany(card.getCardCompany().getId())
-                    .benefitTitle(benefitTitle)
-                    .benefitSummary(benefitSummary)
-                    .annualFee(card.getAnnualFee())
-                    .previousAmount(card.getPreviousAmount())
-//                    .cardURL(card.getCardURL())
-                    .build());
-        }
-
-        return cards;
-    }
-
 }
