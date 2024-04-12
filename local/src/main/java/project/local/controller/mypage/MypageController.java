@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import project.local.dto.mypage.*;
 import project.local.service.MyDataServiceImpl;
+import project.local.service.SubscriptionServiceImpl;
+import project.local.service.UserServiceImpl;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -17,11 +19,13 @@ import java.util.List;
 public class MypageController {
 
     private final MyDataServiceImpl myPageService;
+    private final UserServiceImpl userService;
+    private final SubscriptionServiceImpl subscriptionService;
     LocalDate now = LocalDate.now();
 
     @GetMapping
     public MypageDTO forMypage(@PathVariable("userId") Long id) throws Exception {
-        Long userId = myPageService.findUser(id);
+        Long userId = userService.findUser(id);
 
         // id를 header에 넣어서 api 요청 -> 내 카드 리스트 반환
         List<CardsDTO> cardsDTOS = myPageService.requestCards(userId);
@@ -30,18 +34,18 @@ public class MypageController {
         List<BillsDTO> billsDTOS = myPageService.requestBills(userId);
 
         //현재시간을 기반으로 전월에 대한 데이터 뽑기 위한 준비작업
-        TimeAndTotalAmountDTO dto = myPageService.getTimeAndTotalAmount(billsDTOS, now);
+        TimeAndTotalAmountDTO dto = userService.getTimeAndTotalAmount(billsDTOS, now);
 
         // id를 header, 년월을 파라미터로 api 요청 -> 특정 달의 청구 상세내역 반환
         List<BillsDetailsDTO> billsDetailsDTOS = myPageService.requestBillsDetails(userId, dto.getMonth());
 
-        List<String> myCardImages = myPageService.findMyCardLists(cardsDTOS);
+        List<String> myCardImages = userService.findMyCardLists(cardsDTOS);
 
-        SpentAmountDTO spentAmount = myPageService.findSpentAmount(billsDetailsDTOS);
+        SpentAmountDTO spentAmount = userService.findSpentAmount(billsDetailsDTOS);
 
-        myPageService.findMySubscription();
+        List<MySubscriptionDTO> mySubscriptionDTOS = myPageService.requestSubscription();
 
-        List<RecommendedSubDTO> recommendedSubDTOS = myPageService.recommendSub(spentAmount, cardsDTOS);
+        List<RecommendedSubDTO> recommendedSubDTOS = subscriptionService.recommendSub(spentAmount, cardsDTOS);
 
         System.out.println("recommendedSubDTOS = " + recommendedSubDTOS);
 
@@ -51,7 +55,7 @@ public class MypageController {
                 .spentAmountDTO(spentAmount)
                 .images(myCardImages)
                 .recommendedSubDTO(recommendedSubDTOS)
-                .mySubscriptionDTO(myPageService.findMySubscription())
+                .mySubscriptionDTO(mySubscriptionDTOS)
                 .build();
 
     }
