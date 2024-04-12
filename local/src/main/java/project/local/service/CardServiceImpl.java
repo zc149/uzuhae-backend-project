@@ -14,9 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CardServiceImpl {
 
-    private final CardRepository cardRepository;
     private final CardBenefitsRepository cardBenefitsRepository;
-
 
     // 혜택 데이터 전부 불러오기
     public List<LocalCardBenefitsDTO> findAllCardBenefit() {

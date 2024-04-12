@@ -4,10 +4,10 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import project.local.dto.mypage.BillsDTO;
-import project.local.dto.mypage.BillsDetailsDTO;
-import project.local.dto.mypage.CardsDTO;
-import project.local.dto.mypage.MySubscriptionDTO;
+import project.local.dto.mydata.BillsDTO;
+import project.local.dto.mydata.BillsDetailsDTO;
+import project.local.dto.mydata.CardsDTO;
+import project.local.dto.mydata.SubscriptionDTO;
 import project.local.service.inter.MyDataService;
 
 import java.net.URI;
@@ -23,6 +23,7 @@ public class MyDataServiceImpl implements MyDataService {
     private final HttpClient httpClient = HttpClient.newHttpClient();
     private final ObjectMapper objectMapper = new ObjectMapper();
 
+    @Override
     public List<CardsDTO> requestCards(Long id) throws Exception {
         String userId = String.valueOf(id);
 
@@ -41,6 +42,7 @@ public class MyDataServiceImpl implements MyDataService {
         return cards;
     }
 
+    @Override
     public List<BillsDTO> requestBills(Long id) throws Exception {
         String userId = String.valueOf(id);
 
@@ -59,6 +61,7 @@ public class MyDataServiceImpl implements MyDataService {
         return bills;
     }
 
+    @Override
     public List<BillsDetailsDTO> requestBillsDetails(Long id, int month) throws Exception {
         String userId = String.valueOf(id);
 
@@ -80,8 +83,23 @@ public class MyDataServiceImpl implements MyDataService {
         return billsDetails;
     }
 
-    public List<MySubscriptionDTO> requestSubscription() throws Exception {
-        return null;
+    @Override
+    public List<SubscriptionDTO> requestSubscription(Long id) throws Exception {
+        String userId = String.valueOf(id);
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("http://192.168.0.65:8081/v2/subs"))
+                .header("userId", userId) // 헤더에 userId 추가
+                .GET()
+                .build();
+
+        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+
+        // JSON 응답을 CardsDTO 리스트로 변환
+        List<SubscriptionDTO> subscriptionDTOs = objectMapper.readValue(response.body(), new TypeReference<List<SubscriptionDTO>>() {
+        });
+
+        return subscriptionDTOs;
     }
 
 
