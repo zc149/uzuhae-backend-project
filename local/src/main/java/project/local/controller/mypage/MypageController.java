@@ -5,10 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import project.local.dto.*;
-import project.local.dto.CardsDTO;
-import project.local.dto.MypageDTO;
-import project.local.service.MyPageServiceImpl;
+import project.local.dto.mypage.*;
+import project.local.service.MyDataServiceImpl;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -18,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MypageController {
 
-    private final MyPageServiceImpl myPageService;
+    private final MyDataServiceImpl myPageService;
     LocalDate now = LocalDate.now();
 
     @GetMapping
@@ -27,9 +25,6 @@ public class MypageController {
 
         // id를 header에 넣어서 api 요청 -> 내 카드 리스트 반환
         List<CardsDTO> cardsDTOS = myPageService.requestCards(userId);
-
-        // 이제 user객체를 가지고? id만 헤더에 넣어서? HttpClient로 Mydata api에 요청!
-        List<CardsDTO> cardInfoListDTOs = myPageService.requestCards(userId);
 
         // id를 header에 넣어서 api 요청 -> 내 년, 월 별 청구내역 반환
         List<BillsDTO> billsDTOS = myPageService.requestBills(userId);
@@ -40,7 +35,25 @@ public class MypageController {
         // id를 header, 년월을 파라미터로 api 요청 -> 특정 달의 청구 상세내역 반환
         List<BillsDetailsDTO> billsDetailsDTOS = myPageService.requestBillsDetails(userId, dto.getMonth());
 
-        return myPageService.responseMypage(cardsDTOS, dto.getTotalAmount(), billsDetailsDTOS);
+        List<String> myCardImages = myPageService.findMyCardLists(cardsDTOS);
+
+        SpentAmountDTO spentAmount = myPageService.findSpentAmount(billsDetailsDTOS);
+
+        myPageService.findMySubscription();
+
+        List<RecommendedSubDTO> recommendedSubDTOS = myPageService.recommendSub(spentAmount, cardsDTOS);
+
+        System.out.println("recommendedSubDTOS = " + recommendedSubDTOS);
+
+
+        return MypageDTO.builder()
+                .timeAndTotalAmountDTO(dto)
+                .spentAmountDTO(spentAmount)
+                .images(myCardImages)
+                .recommendedSubDTO(recommendedSubDTOS)
+                .mySubscriptionDTO(myPageService.findMySubscription())
+                .build();
+
     }
 
 }

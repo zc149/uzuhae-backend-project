@@ -30,6 +30,9 @@ public class SubscriptionBenefits {
     @Column(name = "SUBSCRIPTION_FEE", nullable = false)
     private String fee;
 
+    @Column(name = "SUBSCRIPTION_COMPANY_IMAGE", nullable = false)
+    private String image;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COMPANY_NAME")
     private CardCompany cardCompany;
