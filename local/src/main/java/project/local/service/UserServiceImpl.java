@@ -12,9 +12,9 @@ import project.local.dto.mypage.TimeAndTotalAmountDTO;
 import project.local.entity.cardInfo.Card;
 import project.local.entity.cardInfo.SubscriptionBenefits;
 import project.local.entity.userInfo.User;
-import project.local.repository.CardRepository;
-import project.local.repository.SubscriptionRepository;
-import project.local.repository.UserRepository;
+import project.local.repository.mypage.CardRepository;
+import project.local.repository.mypage.SubscriptionRepository;
+import project.local.repository.mypage.UserRepository;
 import project.local.service.inter.UserService;
 
 import java.time.LocalDate;

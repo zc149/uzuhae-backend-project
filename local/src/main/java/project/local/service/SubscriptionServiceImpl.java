@@ -6,7 +6,7 @@ import project.local.dto.mydata.CardsDTO;
 import project.local.dto.mypage.MySubscriptionDTO;
 import project.local.dto.mypage.SpentAmountDTO;
 import project.local.entity.cardInfo.SubscriptionBenefits;
-import project.local.repository.SubscriptionRepository;
+import project.local.repository.mypage.SubscriptionRepository;
 import project.local.service.inter.SubscriptionService;
 
 import java.util.ArrayList;

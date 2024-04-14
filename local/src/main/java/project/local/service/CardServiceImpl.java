@@ -4,8 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import project.local.dto.local.LocalCardBenefitsDTO;
 import project.local.entity.cardInfo.CardBenefits;
-import project.local.repository.CardBenefitsRepository;
-import project.local.repository.CardRepository;
+import project.local.repository.mypage.CardBenefitsRepository;
 
 import java.util.ArrayList;
 import java.util.List;

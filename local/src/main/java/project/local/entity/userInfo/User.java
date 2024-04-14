@@ -31,6 +31,10 @@ public class User {
     @Column(name = "JOIN_DATE", nullable = false)
     private Date joinDate;
 
+    // 컬럼 추가
+    @Column(name = "ROLE", nullable = false)
+    private String  role;
+
 //    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
 //    @Singular
 //    private List<Inquiry> inquiries;

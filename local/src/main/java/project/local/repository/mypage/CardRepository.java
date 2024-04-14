@@ -1,4 +1,4 @@
-package project.local.repository;
+package project.local.repository.mypage;
 
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
