@@ -21,5 +21,4 @@ public interface UserService {
 
     SpentAmountDTO findSpentAmount(List<BillsDetailsDTO> billsDetails);
 
-    List<MySubscriptionDTO> findMySubscription(List<SubscriptionDTO> subscriptions);
 }

@@ -10,10 +10,8 @@ import project.local.dto.mypage.MySubscriptionDTO;
 import project.local.dto.mypage.SpentAmountDTO;
 import project.local.dto.mypage.TimeAndTotalAmountDTO;
 import project.local.entity.cardInfo.Card;
-import project.local.entity.cardInfo.SubscriptionBenefits;
 import project.local.entity.userInfo.User;
 import project.local.repository.mypage.CardRepository;
-import project.local.repository.mypage.SubscriptionRepository;
 import project.local.repository.mypage.UserRepository;
 import project.local.service.inter.UserService;
 
@@ -26,7 +24,6 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
     private final CardRepository cardRepository;
-    private final SubscriptionRepository subscriptionRepository;
 
     // 회원 찾고 그 회원의 보유 카드 찾기 // null이면 회원이 아님.
     @Override
@@ -112,23 +109,4 @@ public class UserServiceImpl implements UserService {
                 .build();
     }
 
-    @Override
-    public List<MySubscriptionDTO> findMySubscription(List<SubscriptionDTO> subscriptions) {
-        List<MySubscriptionDTO> mySubscriptionDTOS = new ArrayList<>();
-        for (SubscriptionDTO subscription : subscriptions) {
-            SubscriptionBenefits subscriptionBenefits = subscriptionRepository.findById(subscription.getSubscriptionId()).orElse(null);
-
-            mySubscriptionDTOS.add(MySubscriptionDTO.builder()
-                    .category(subscriptionBenefits.getCategory())
-                    .title(subscriptionBenefits.getTitle())
-                    .summary(subscriptionBenefits.getTitle())
-                    .fee(subscriptionBenefits.getFee())
-                    .cardCompanyImage(subscriptionBenefits.getCardCompany().getImage())
-                    .companyImage(subscriptionBenefits.getImage())
-                    .issueDate(subscription.getIssueDate())
-                    .expirationDate(subscription.getExpirationDate())
-                    .build());
-        }
-        return mySubscriptionDTOS;
-    }
 }

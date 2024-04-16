@@ -11,7 +11,6 @@ import project.local.dto.mydata.CardsDTO;
 import project.local.dto.mydata.SubscriptionDTO;
 import project.local.dto.mypage.*;
 import project.local.service.MyDataServiceImpl;
-import project.local.service.SubscriptionServiceImpl;
 import project.local.service.UserServiceImpl;
 
 import java.time.LocalDate;
@@ -24,7 +23,6 @@ public class MypageController {
 
     private final MyDataServiceImpl myDataService;
     private final UserServiceImpl userService;
-    private final SubscriptionServiceImpl subscriptionService;
     LocalDate now = LocalDate.now();
 
     @GetMapping
@@ -49,16 +47,12 @@ public class MypageController {
 
         List<SubscriptionDTO> Subscriptions = myDataService.requestSubscription(userId);
 
-        List<MySubscriptionDTO> mySubscriptionDTOS = userService.findMySubscription(Subscriptions);
 
-        List<MySubscriptionDTO> recommendedSubDTOS = subscriptionService.recommendSub(spentAmount, cards);
 
         return MypageDTO.builder()
                 .timeAndTotalAmountDTO(dto)
                 .spentAmountDTO(spentAmount)
                 .images(myCardImages)
-                .mySubscriptionDTO(mySubscriptionDTOS)
-                .recommendedSubDTO(recommendedSubDTOS)
                 .build();
 
     }
