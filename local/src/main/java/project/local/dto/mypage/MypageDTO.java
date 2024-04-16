@@ -18,9 +18,4 @@ public class MypageDTO {
     // 내 카드 리스트
     private List<String> images;
 
-    private List<MySubscriptionDTO> mySubscriptionDTO;
-
-    private List<MySubscriptionDTO> recommendedSubDTO;
-
-
 }
