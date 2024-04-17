@@ -18,7 +18,7 @@ public class CardBenefits {
     @Column(name = "CARD_BENEFITS_ID", nullable = false)
     private Long id;
 
-    @Column(name = "CARD_BENEFITS_CATAGORY", nullable = false)
+    @Column(name = "CARD_BENEFITS_CATAGORY", nullable = true)
     private String category;
 
     @Column(name = "CARD_BENEFITS_TITLE", nullable = false)

@@ -1,9 +1,6 @@
 package project.local.dto.local;
 
 import lombok.*;
-import project.local.entity.cardInfo.CardCompany;
-
-import javax.persistence.*;
 
 @Builder
 @Getter
@@ -17,7 +14,7 @@ public class LocalCardDTO {
     private String cardType;
     private String annualFee;
     private String previousAmount;
-    private CardCompany cardCompany;
+    private String cardCompany;
     private String cardImage;
 
 

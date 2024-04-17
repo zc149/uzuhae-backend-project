@@ -1,7 +1,6 @@
 package project.local.entity.cardInfo;
 
 import lombok.*;
-import project.local.entity.cardInfo.CardCompany;
 
 import javax.persistence.*;
 
@@ -33,8 +32,5 @@ public class SubscriptionBenefits {
     @Column(name = "SUBSCRIPTION_COMPANY_IMAGE", nullable = false)
     private String image;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "COMPANY_NAME")
-    private CardCompany cardCompany;
 
 }

@@ -29,9 +29,8 @@ public class Card {
     @Column(name = "PREVIOUS_AMOUNT", nullable = false)
     private String previousAmount;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "COMPANY_NAME")
-    private CardCompany cardCompany;
+    @Column(name = "COMPANY_NAME", nullable = false)
+    private String cardCompany;
 
     @Column(name = "CARD_IMAGE", nullable = false)
     private String cardImage;
