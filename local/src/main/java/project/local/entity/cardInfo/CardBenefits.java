@@ -15,16 +15,16 @@ import javax.persistence.*;
 public class CardBenefits {
 
     @Id
-    @Column(name = "CARD_BENEFITS_ID", nullable = false)
+    @Column(name = "CARD_BENEFITS_ID")
     private Long id;
 
-    @Column(name = "CARD_BENEFITS_CATAGORY", nullable = false)
+    @Column(name = "CARD_BENEFITS_CATAGORY")
     private String category;
 
-    @Column(name = "CARD_BENEFITS_TITLE", nullable = false)
+    @Column(name = "CARD_BENEFITS_TITLE")
     private String benefitTitle;
 
-    @Column(name = "CARD_BENEFITS_SUMMARY", nullable = false)
+    @Column(name = "CARD_BENEFITS_SUMMARY")
     private String benefitSummary;
 
     @ManyToOne(fetch = FetchType.LAZY)
