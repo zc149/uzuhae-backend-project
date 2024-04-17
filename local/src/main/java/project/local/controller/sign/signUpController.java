@@ -10,7 +10,6 @@ import project.local.service.inter.JoinService;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173/")
 public class signUpController {
 
     private final JoinService joinService;

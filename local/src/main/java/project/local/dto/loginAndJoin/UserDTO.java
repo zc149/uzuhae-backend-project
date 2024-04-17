@@ -1,6 +1,8 @@
 package project.local.dto.loginAndJoin;
 
 import lombok.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.Column;
 import javax.persistence.Id;

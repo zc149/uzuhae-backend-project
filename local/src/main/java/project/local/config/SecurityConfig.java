@@ -11,6 +11,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import project.local.controller.sign.jwt.JWTFilter;
 import project.local.controller.sign.jwt.JWTUtil;
 import project.local.controller.sign.jwt.LoginFilter;
 
@@ -58,6 +59,9 @@ public class SecurityConfig {
                         .antMatchers("/login", "/", "/api/signUp").permitAll()
                         .antMatchers("/admin").hasRole("ADMIN")
                         .anyRequest().authenticated());
+
+        http
+                .addFilterBefore(new JWTFilter(jwtUtil), LoginFilter.class);
 
         http
                 .addFilterAt(new LoginFilter(authenticationManager(authenticationConfiguration),jwtUtil), UsernamePasswordAuthenticationFilter.class);

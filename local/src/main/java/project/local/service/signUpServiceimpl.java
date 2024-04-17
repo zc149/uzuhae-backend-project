@@ -23,10 +23,10 @@ public class signUpServiceimpl implements JoinService {
         User data = User.builder()
                 .id(userDTO.getId())
                 .password(bCryptPasswordEncoder.encode(userDTO.getPassword()))
-                .nickName("팀맵") // 임시로 닉네임 설정
+                .nickName(userDTO.getNickName())
                 .name(userDTO.getName())
                 .joinDate(Date.valueOf(LocalDate.now()))
-                .role("ROLE_ADMIN") // 임시로 어드민으로 설정
+                .role("ROLE_ADMIN") //
                 .build();
         
         Boolean ieExist = userRepository.existsById(userDTO.getId());
