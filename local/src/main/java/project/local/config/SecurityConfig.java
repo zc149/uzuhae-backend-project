@@ -56,7 +56,7 @@ public class SecurityConfig {
         //경로별 인가 작업
         http
                 .authorizeHttpRequests((auth) -> auth
-                        .antMatchers("/login", "/", "/api/signUp").permitAll()
+                        .antMatchers("/login", "/api/userTransaction", "/api/signUp").permitAll()
                         .antMatchers("/admin").hasRole("ADMIN")
                         .anyRequest().authenticated());
 
