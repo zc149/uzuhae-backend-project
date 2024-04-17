@@ -3,8 +3,6 @@ package project.local.service.inter;
 import project.local.dto.mydata.BillsDTO;
 import project.local.dto.mydata.BillsDetailsDTO;
 import project.local.dto.mydata.CardsDTO;
-import project.local.dto.mydata.SubscriptionDTO;
-import project.local.dto.mypage.MySubscriptionDTO;
 import project.local.dto.mypage.SpentAmountDTO;
 import project.local.dto.mypage.TimeAndTotalAmountDTO;
 

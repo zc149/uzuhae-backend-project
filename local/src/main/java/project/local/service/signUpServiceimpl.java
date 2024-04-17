@@ -5,7 +5,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import project.local.dto.loginAndJoin.UserDTO;
 import project.local.entity.userInfo.User;
-import project.local.repository.mypage.UserRepository;
+import project.local.repository.UserRepository;
 import project.local.service.inter.JoinService;
 
 import java.sql.Date;

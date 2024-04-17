@@ -2,8 +2,6 @@ package project.local.dto.local;
 
 import lombok.*;
 
-import javax.persistence.*;
-
 @Builder
 @Getter
 @ToString

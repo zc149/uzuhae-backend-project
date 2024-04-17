@@ -5,14 +5,12 @@ import org.springframework.stereotype.Service;
 import project.local.dto.mydata.BillsDTO;
 import project.local.dto.mydata.BillsDetailsDTO;
 import project.local.dto.mydata.CardsDTO;
-import project.local.dto.mydata.SubscriptionDTO;
-import project.local.dto.mypage.MySubscriptionDTO;
 import project.local.dto.mypage.SpentAmountDTO;
 import project.local.dto.mypage.TimeAndTotalAmountDTO;
 import project.local.entity.cardInfo.Card;
 import project.local.entity.userInfo.User;
-import project.local.repository.mypage.CardRepository;
-import project.local.repository.mypage.UserRepository;
+import project.local.repository.CardRepository;
+import project.local.repository.UserRepository;
 import project.local.service.inter.UserService;
 
 import java.time.LocalDate;
@@ -108,5 +106,4 @@ public class UserServiceImpl implements UserService {
                 .maxCategory(maxCategory)
                 .build();
     }
-
 }

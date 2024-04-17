@@ -35,11 +35,4 @@ public class Card {
     @Column(name = "CARD_IMAGE")
     private String cardImage;
 
-//    @Column(name = "CARD_URL", nullable = false)
-//    private String cardURL;
-
-//    @OneToMany(mappedBy = "card", cascade = CascadeType.ALL, orphanRemoval = true)
-//    @Singular
-//    private List<CardBenefits> cardBenefits;
-
 }

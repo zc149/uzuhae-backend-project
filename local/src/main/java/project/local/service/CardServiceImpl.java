@@ -6,8 +6,8 @@ import project.local.dto.CardDetailDTO.CardDetailDTO;
 import project.local.dto.local.LocalCardBenefitsDTO;
 import project.local.entity.cardInfo.Card;
 import project.local.entity.cardInfo.CardBenefits;
-import project.local.repository.mypage.CardBenefitsRepository;
-import project.local.repository.mypage.CardRepository;
+import project.local.repository.CardBenefitsRepository;
+import project.local.repository.CardRepository;
 
 import java.util.ArrayList;
 import java.util.List;

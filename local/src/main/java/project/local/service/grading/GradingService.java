@@ -1,11 +1,10 @@
 package project.local.service.grading;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 import project.local.dto.posDTO.PosDTO;
 import project.local.entity.userInfo.User;
-import project.local.repository.mypage.UserRepository;
+import project.local.repository.UserRepository;
 
 @RequiredArgsConstructor
 @Service

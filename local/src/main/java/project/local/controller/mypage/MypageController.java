@@ -1,15 +1,13 @@
 package project.local.controller.mypage;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import project.local.dto.mydata.BillsDTO;
 import project.local.dto.mydata.BillsDetailsDTO;
 import project.local.dto.mydata.CardsDTO;
-import project.local.dto.mydata.SubscriptionDTO;
-import project.local.dto.mypage.*;
+import project.local.dto.mypage.MypageDTO;
+import project.local.dto.mypage.SpentAmountDTO;
+import project.local.dto.mypage.TimeAndTotalAmountDTO;
 import project.local.service.MyDataServiceImpl;
 import project.local.service.UserServiceImpl;
 
@@ -19,6 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/woorieodi/mypage/{userId}")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:5173/")
 public class MypageController {
 
     private final MyDataServiceImpl myDataService;
@@ -45,20 +44,10 @@ public class MypageController {
 
         SpentAmountDTO spentAmount = userService.findSpentAmount(billsDetails);
 
-        List<SubscriptionDTO> Subscriptions = myDataService.requestSubscription(userId);
-
-
-
         return MypageDTO.builder()
                 .timeAndTotalAmountDTO(dto)
                 .spentAmountDTO(spentAmount)
                 .images(myCardImages)
                 .build();
-
     }
-
 }
-
-
-
-

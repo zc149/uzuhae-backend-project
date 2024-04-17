@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import project.local.controller.sign.jwt.CustomUserDetails;
 import project.local.entity.userInfo.User;
-import project.local.repository.mypage.UserRepository;
+import project.local.repository.UserRepository;
 
 import java.util.Optional;
 
