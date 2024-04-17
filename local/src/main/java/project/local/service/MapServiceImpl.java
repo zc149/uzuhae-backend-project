@@ -2,7 +2,6 @@ package project.local.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import project.local.dto.local.LocalCardBenefitsDTO;
 import project.local.dto.map.MapBenefitDTO;
 import project.local.dto.mydata.CardsDTO;
 import project.local.entity.Category;
@@ -11,9 +10,7 @@ import project.local.entity.cardInfo.CardBenefits;
 import project.local.repository.CardBenefitsRepository;
 import project.local.repository.CardRepository;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor

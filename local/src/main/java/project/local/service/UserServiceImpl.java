@@ -10,7 +10,6 @@ import project.local.dto.mypage.TimeAndTotalAmountDTO;
 import project.local.entity.cardInfo.Card;
 import project.local.entity.userInfo.User;
 import project.local.repository.CardRepository;
-import project.local.repository.SubscriptionRepository;
 import project.local.repository.UserRepository;
 import project.local.service.inter.UserService;
 
@@ -23,7 +22,6 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
     private final CardRepository cardRepository;
-    private final SubscriptionRepository subscriptionRepository;
 
     // 회원 찾고 그 회원의 보유 카드 찾기 // null이면 회원이 아님.
     @Override

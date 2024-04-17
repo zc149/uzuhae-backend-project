@@ -9,6 +9,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
+@Setter
 @Entity
 @Table(name = "USER")
 @Builder
@@ -31,13 +32,17 @@ public class User {
     @Column(name = "JOIN_DATE", nullable = false)
     private Date joinDate;
 
-//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-//    @Singular
-//    private List<Inquiry> inquiries;
-//
-//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-//    @Singular
-//    private List<SearchHistory> searchHistories;
+    // 컬럼 추가
+    @Column(name = "ROLE", nullable = false)
+    private String  role;
+
+    @Column(name = "REAL_PAY", nullable = true)
+    private int realPay;
+
+    @Column(name = "RESULT_PAY", nullable = true)
+    private int resultPay;
+
+
 
 
 }

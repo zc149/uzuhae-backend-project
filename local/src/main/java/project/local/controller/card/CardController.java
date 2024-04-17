@@ -1,20 +1,19 @@
 package project.local.controller.card;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import project.local.dto.CardDetailDTO.CardDetailDTO;
+import project.local.dto.CardDetailDTO.CardDetailRequestDTO;
 import project.local.dto.local.LocalCardBenefitsDTO;
 
 import project.local.service.CardServiceImpl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/woorieodi/card")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173/")
 public class CardController {
 
     private final CardServiceImpl cardService;
@@ -24,6 +23,16 @@ public class CardController {
     public List<LocalCardBenefitsDTO> findAllCardBenefit() {
         List<LocalCardBenefitsDTO> cardBenefits = cardService.findAllCardBenefit();
         return cardBenefits;
+
+    }
+
+    @PostMapping("/carddetail")
+    public List<CardDetailDTO> processCardDetail(@RequestBody CardDetailRequestDTO[] cardDetailRequestDTOS) {
+
+        ArrayList<CardDetailDTO> list = new ArrayList<>();
+        for (CardDetailRequestDTO x : cardDetailRequestDTOS) list.add(cardService.findById(x.getCardId()));
+
+        return list;
 
     }
 

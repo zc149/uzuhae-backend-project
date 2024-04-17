@@ -16,4 +16,3 @@ public interface CardBenefitsRepository extends JpaRepository<CardBenefits, Long
 
     CardBenefits findByCard_IdAndCategory(Long cardId, String category);
 }
-
