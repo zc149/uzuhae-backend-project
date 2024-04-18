@@ -53,12 +53,16 @@ public class SecurityConfig {
         http
                 .httpBasic((auth) -> auth.disable());
 
-        //경로별 인가 작업
+        // //경로별 인가 작업
+        // http
+        //         .authorizeHttpRequests((auth) -> auth
+        //                 .antMatchers("/login", "/api/userTransaction", "/api/signUp").permitAll()
+        //                 .antMatchers("/admin").hasRole("ADMIN")
+        //                 .anyRequest().authenticated());
+
         http
-                .authorizeHttpRequests((auth) -> auth
-                        .antMatchers("/login", "/api/userTransaction", "/api/signUp").permitAll()
-                        .antMatchers("/admin").hasRole("ADMIN")
-                        .anyRequest().authenticated());
+                    .authorizeHttpRequests((auth) -> auth
+                            .antMatchers("/**").permitAll());
 
         http
                 .addFilterBefore(new JWTFilter(jwtUtil), LoginFilter.class);
