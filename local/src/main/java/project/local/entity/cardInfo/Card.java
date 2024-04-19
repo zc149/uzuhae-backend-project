@@ -35,4 +35,27 @@ public class Card {
     @Column(name = "CARD_IMAGE")
     private String cardImage;
 
+    public void setCardName(String cardName) {
+        this.cardName = cardName;
+    }
+
+    public void setCardType(String cardType) {
+        this.cardType = cardType;
+    }
+
+    public void setAnnualFee(String annualFee) {
+        this.annualFee = annualFee;
+    }
+
+    public void setPreviousAmount(String previousAmount) {
+        this.previousAmount = previousAmount;
+    }
+
+    public void setCardCompany(String cardCompany) {
+        this.cardCompany = cardCompany;
+    }
+
+    public void setCardImage(String cardImage) {
+        this.cardImage = cardImage;
+    }
 }

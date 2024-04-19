@@ -44,11 +44,11 @@ public class CardServiceImpl {
         Card b = cardRepository.findById(a.getCard().getId()).orElse(null);
 
         return CardDetailDTO.builder()
-                .benefits_Id(a.getId())
-                .card_benefit_title(a.getBenefitTitle())
-                .card_benefit_summary(a.getBenefitSummary())
-                .card_company(b.getCardCompany())
-                .card_img(b.getCardImage())
+                .benefitsId(a.getId())
+                .benefitTitle(a.getBenefitTitle())
+                .benefitSummary(a.getBenefitSummary())
+                .cardCompany(b.getCardCompany())
+                .cardImage(b.getCardImage())
                 .build();
 
     }
