@@ -1,8 +1,6 @@
 package project.local.entity.cardInfo;
 
 import lombok.*;
-import project.local.entity.cardInfo.Card;
-
 import javax.persistence.*;
 
 @Builder
@@ -42,13 +40,10 @@ public class CardBenefits {
     @Column(name = "CARD_BENEFITS_SUMMARY_MAP")
     private String benefitSummaryMap;
 
-<<<<<<< HEAD
     public void setCategory(String category) {
         this.category = category;
     }
 
-=======
->>>>>>> d122f3abc6c03d65a55558f9d46dd9f48a36c77c
     public void setBenefitTitle(String benefitTitle) {
         this.benefitTitle = benefitTitle;
     }

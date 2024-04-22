@@ -7,10 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import project.local.dto.local.LocalCardBenefitsDTO;
-<<<<<<< HEAD
-=======
-import project.local.dto.map.MapBenefitDTO;
->>>>>>> d122f3abc6c03d65a55558f9d46dd9f48a36c77c
 import project.local.service.MapServiceImpl;
 
 @Log4j2
@@ -28,7 +24,7 @@ public class MapBenefitsController {
             log.info(categoryByCode);
             return mapService.findCardByCategory(categoryByCode, 1012341234L);
         } catch (Exception e) {
-            log.info("asdf");
+            log.info(e);
             throw new RuntimeException(e);
         }
     }
