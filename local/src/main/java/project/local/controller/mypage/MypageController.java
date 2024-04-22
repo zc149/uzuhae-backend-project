@@ -2,7 +2,6 @@ package project.local.controller.mypage;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import project.local.dto.mydata.BillsDTO;
 import project.local.dto.mydata.BillsDetailsDTO;
@@ -20,7 +19,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/woorieodi/mypage/{userId}")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173/")
 public class MypageController {
 
     private final MyDataServiceImpl myDataService;
@@ -35,9 +33,8 @@ public class MypageController {
         List<CardsDTO> cards = null;
         try {
             cards = myDataService.requestCards(userId);
-            log.info("안뇽 로그");
         } catch (Exception e) {
-           log.info("이런 슈발!!!!");
+           log.info(e);
             throw new RuntimeException(e);
         }
 

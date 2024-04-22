@@ -2,7 +2,7 @@ package project.local.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import project.local.dto.CardDetailDTO.CardDetailDTO;
+import project.local.dto.cardDetails.CardDetailDTO;
 import project.local.dto.local.LocalCardBenefitsDTO;
 import project.local.entity.cardInfo.Card;
 import project.local.entity.cardInfo.CardBenefits;

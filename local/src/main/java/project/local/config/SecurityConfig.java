@@ -41,7 +41,7 @@ public class SecurityConfig {
         //csrf disable
         http
                 .csrf((auth) -> auth.disable());
-        
+
         http
                 .cors(); // cors 커스텀 설정
 
@@ -61,8 +61,13 @@ public class SecurityConfig {
         //                 .anyRequest().authenticated());
 
         http
+<<<<<<< HEAD
+                .authorizeHttpRequests((auth) -> auth
+                        .antMatchers("/**").permitAll());
+=======
                     .authorizeHttpRequests((auth) -> auth
                             .antMatchers("/**").permitAll());
+>>>>>>> d122f3abc6c03d65a55558f9d46dd9f48a36c77c
 
         http
                 .addFilterBefore(new JWTFilter(jwtUtil), LoginFilter.class);
@@ -78,5 +83,4 @@ public class SecurityConfig {
         return http.build();
     }
 }
-
 
