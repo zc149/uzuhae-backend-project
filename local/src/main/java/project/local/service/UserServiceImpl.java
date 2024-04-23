@@ -7,6 +7,7 @@ import project.local.dto.mydata.BillsDetailsDTO;
 import project.local.dto.mydata.CardsDTO;
 import project.local.dto.mypage.SpentAmountDTO;
 import project.local.dto.mypage.TimeAndTotalAmountDTO;
+import project.local.entity.Category;
 import project.local.entity.cardInfo.Card;
 import project.local.entity.userInfo.User;
 import project.local.repository.CardRepository;
@@ -103,7 +104,18 @@ public class UserServiceImpl implements UserService {
                 .supermarket(categories.getOrDefault("대형마트", 0))
                 .movie(categories.getOrDefault("영화관", 0))
                 .etc(etcSum)
-                .maxCategory(maxCategory)
+                .maxCategoryValue(maxCategory)
                 .build();
     }
+
+    @Override
+    public String getCategoryCodeFromValue(String categoryValue) {
+        for (Category category : Category.values()) {
+            if (category.getCategory().equals(categoryValue)) {
+                return category.name();
+            }
+        }
+        return null;
+    }
+
 }

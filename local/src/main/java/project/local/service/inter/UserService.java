@@ -9,14 +9,15 @@ import project.local.dto.mypage.TimeAndTotalAmountDTO;
 import java.time.LocalDate;
 import java.util.List;
 
-public interface UserService {
+    public interface UserService {
 
-    Long findUser(Long id);
+        Long findUser(Long id);
 
-    List<String> findMyCardLists(List<CardsDTO> cards);
+        List<String> findMyCardLists(List<CardsDTO> cards);
 
-    TimeAndTotalAmountDTO getTimeAndTotalAmount(List<BillsDTO> bills, LocalDate time);
+        TimeAndTotalAmountDTO getTimeAndTotalAmount(List<BillsDTO> bills, LocalDate time);
 
     SpentAmountDTO findSpentAmount(List<BillsDetailsDTO> billsDetails);
 
+    String getCategoryCodeFromValue(String categoryValue);
 }

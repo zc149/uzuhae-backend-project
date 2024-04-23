@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/woorieodi/card")
+@RequestMapping("/universe/card")
 @RequiredArgsConstructor
 public class CardController {
 

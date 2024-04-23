@@ -18,4 +18,6 @@ public class MypageDTO {
     // 내 카드 리스트
     private List<String> images;
 
+    private String maxCategoryCode;
+
 }

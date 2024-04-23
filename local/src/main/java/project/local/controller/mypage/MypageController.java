@@ -45,10 +45,13 @@ public class MypageController {
 
         SpentAmountDTO spentAmount = userService.findSpentAmount(billsDetails);
 
+        String categoryCodeFromValue = userService.getCategoryCodeFromValue(spentAmount.getMaxCategoryValue());
+
         return MypageDTO.builder()
                 .timeAndTotalAmountDTO(dto)
                 .spentAmountDTO(spentAmount)
                 .images(myCardImages)
+                .maxCategoryCode(categoryCodeFromValue)
                 .build();
     }
 }
