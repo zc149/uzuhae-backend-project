@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import project.local.dto.local.LocalCardBenefitsDTO;
+import project.local.dto.map.StoreDTO;
 import project.local.service.MapServiceImpl;
+
+import java.util.List;
 
 @Log4j2
 @RestController
@@ -27,5 +30,11 @@ public class MapBenefitsController {
             log.info(e);
             throw new RuntimeException(e);
         }
+    }
+
+    @GetMapping("/store")
+    public List<StoreDTO> findAllStore() {
+        List<StoreDTO> storeDTOS = mapService.findAllStore();
+        return storeDTOS;
     }
 }
