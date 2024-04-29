@@ -1,4 +1,386 @@
 <<<<<<< HEAD
+2024-04-29 09:24  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on macdduck with PID 31920 (C:\GitHub\map-team-final-project\hello\back\JihoGivenchy-back-local\local\build\classes\java\main started by knh96 in C:\GitHub\map-team-final-project\hello\back\JihoGivenchy-back-local\local)
+2024-04-29 09:24  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-04-29 09:24  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29 09:24  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 92 ms. Found 3 JPA repository interfaces.
+2024-04-29 09:24  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-04-29 09:24  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-29 09:24  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-04-29 09:24  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-04-29 09:24  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-04-29 09:24  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 2179 ms
+2024-04-29 09:24  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-29 09:24  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-04-29 09:24  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-04-29 09:24  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-04-29 09:24  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-04-29 09:24  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-04-29 09:24  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-04-29 09:24  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29 09:24  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6a8ab98f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d529bc0, org.springframework.security.web.context.SecurityContextPersistenceFilter@1acfc058, org.springframework.security.web.header.HeaderWriterFilter@561c031, org.springframework.web.filter.CorsFilter@429dde4d, org.springframework.security.web.authentication.logout.LogoutFilter@350d9d23, project.local.controller.sign.jwt.JWTFilter@610d0067, project.local.controller.sign.jwt.LoginFilter@5ef48b08, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@15ca7322, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38318d67, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7a1878d, org.springframework.security.web.session.SessionManagementFilter@6af0407c, org.springframework.security.web.access.ExceptionTranslationFilter@309d54ac, org.springframework.security.web.access.intercept.AuthorizationFilter@4afdb05e]
+2024-04-29 09:24  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-29 09:24  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2024-04-29 09:24  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-29 09:24  INFO [project.local.LocalApplication] Started LocalApplication in 6.279 seconds (JVM running for 7.33)
+2024-04-29 09:24  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-29 09:24  INFO [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2024-04-29 09:24  INFO [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+2024-04-29 09:24  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:29  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:29  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:33  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:33  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:33  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:33  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:33  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:33  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:33  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:33  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:33  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:33  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:33  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:34  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:34  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:34  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:34  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:37  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:37  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:37  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:37  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:38  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:38  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:38  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:38  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:38  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:38  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:42  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:42  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:45  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:45  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:45  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:45  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:46  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:46  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:46  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:46  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:46  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:46  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:46  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:46  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:46  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:50  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:50  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:52  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:52  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:53  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:53  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:53  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:53  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:53  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:53  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:54  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:54  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:56  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:56  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:56  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:56  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:57  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 09:57  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:01  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:01  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:01  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:01  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:01  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:01  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:01  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:01  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:02  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:02  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:02  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:02  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:02  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:02  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:02  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:02  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:03  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:03  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:03  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:03  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:03  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:03  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:03  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:03  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:10  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:10  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:10  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:10  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:17  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:17  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:20  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:20  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:20  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:20  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:20  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:20  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:20  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:20  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:21  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:21  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:24  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:24  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:26  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:26  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:28  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:28  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:43  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:43  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:43  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:43  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:44  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:44  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:44  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:44  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:48  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:48  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:53  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:53  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:55  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:55  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:57  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:57  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:57  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:57  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:57  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:57  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:58  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 10:58  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:00  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:00  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:00  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:00  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:00  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:00  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:00  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:00  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:04  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:04  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:04  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:04  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:06  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:06  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:07  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:07  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:07  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:07  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:08  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:08  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:08  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:08  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:11  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:11  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:11  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:11  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:12  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:12  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:12  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:12  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:15  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:15  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:22  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:22  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:31  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:31  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:34  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:34  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:37  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:37  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:45  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:45  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:48  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:48  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:48  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:48  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:51  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 11:51  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:05  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:05  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:05  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:05  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:06  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:06  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:06  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:06  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:07  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:07  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:09  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:09  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:09  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:09  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:09  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:10  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:10  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:10  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:10  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:10  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:10  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:11  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:11  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:11  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:11  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:12  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:12  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:12  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:12  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:13  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:13  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:13  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:13  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:13  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:13  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:13  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:13  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:13  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:13  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:14  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:14  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:14  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:14  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:14  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:14  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:14  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:14  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:14  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:14  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:14  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:14  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:15  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:15  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:15  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:15  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:15  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:15  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:15  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:15  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:21  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:21  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:22  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:22  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:22  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:22  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:40  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:40  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:40  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:40  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:40  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:40  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:40  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:40  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:40  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:40  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:40  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:40  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 12:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:28  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:28  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:28  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:28  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:30  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:30  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:30  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:30  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:33  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:33  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:33  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:33  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:34  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:34  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:36  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:36  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:38  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:38  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:38  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:38  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:39  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:40  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:40  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:40  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:41  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:52  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:52  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:53  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:53  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:55  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:55  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:55  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:55  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:56  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:56  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:56  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 14:56  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 15:00  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 15:00  WARN [org.springframework.web.servlet.PageNotFound] No mapping for GET /universe/map/store
+2024-04-29 16:13  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on macdduck with PID 68944 (C:\GitHub\map-team-final-project\hello\back\JihoGivenchy-back-local\local\build\classes\java\main started by knh96 in C:\GitHub\map-team-final-project\hello\back\JihoGivenchy-back-local\local)
+2024-04-29 16:13  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-04-29 16:13  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29 16:13  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2024-04-29 16:13  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-04-29 16:13  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-29 16:13  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-04-29 16:13  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-04-29 16:13  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-04-29 16:13  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 2369 ms
+2024-04-29 16:13  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-29 16:13  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-04-29 16:13  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-04-29 16:13  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-04-29 16:13  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-04-29 16:13  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-04-29 16:13  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-04-29 16:13  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29 16:13  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5e8a678a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6fe91918, org.springframework.security.web.context.SecurityContextPersistenceFilter@7528089c, org.springframework.security.web.header.HeaderWriterFilter@6e349258, org.springframework.web.filter.CorsFilter@4d3bde85, org.springframework.security.web.authentication.logout.LogoutFilter@5ce0f50a, project.local.controller.sign.jwt.JWTFilter@f5b4ca6, project.local.controller.sign.jwt.LoginFilter@260ccf0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39007725, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16269ff4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2566247d, org.springframework.security.web.session.SessionManagementFilter@2e590e36, org.springframework.security.web.access.ExceptionTranslationFilter@71db6703, org.springframework.security.web.access.intercept.AuthorizationFilter@596d17f4]
+2024-04-29 16:13  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-29 16:13  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2024-04-29 16:13  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-29 16:13  INFO [project.local.LocalApplication] Started LocalApplication in 6.057 seconds (JVM running for 6.768)
+2024-04-29 16:14  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-29 16:14  INFO [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2024-04-29 16:14  INFO [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+=======
+<<<<<<< HEAD
 2024-04-22 08:25  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on macdduck with PID 45684 (C:\GitHub\map-team-final-project\hello\back\JihoGivenchy-back-local\local\build\classes\java\main started by knh96 in C:\GitHub\map-team-final-project\hello\back\JihoGivenchy-back-local\local)
 2024-04-22 08:25  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
 2024-04-22 08:25  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
@@ -16203,3 +16585,82 @@ com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct 
 2024-04-22 17:27  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
 2024-04-22 17:27  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
 2024-04-22 17:27  INFO [project.local.LocalApplication] Started LocalApplication in 4.856 seconds (JVM running for 5.561)
+>>>>>>> 9cc774ae6eebdc765c6f4f82856c75d660512440
+2024-04-29 16:25  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on macdduck with PID 44216 (C:\GitHub\map-team-final-project\hello\back\JihoGivenchy-back-local\local\build\classes\java\main started by knh96 in C:\GitHub\map-team-final-project\hello\back\JihoGivenchy-back-local\local)
+2024-04-29 16:25  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-04-29 16:25  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29 16:25  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
+2024-04-29 16:25  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-04-29 16:25  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-29 16:25  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-04-29 16:25  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-04-29 16:25  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-04-29 16:25  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 2002 ms
+2024-04-29 16:25  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-29 16:25  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-04-29 16:25  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-04-29 16:25  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-04-29 16:25  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-04-29 16:25  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-04-29 16:25  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-04-29 16:25  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29 16:25  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@47cf922d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b64921f, org.springframework.security.web.context.SecurityContextPersistenceFilter@308d4981, org.springframework.security.web.header.HeaderWriterFilter@71dfca65, org.springframework.web.filter.CorsFilter@439d649c, org.springframework.security.web.authentication.logout.LogoutFilter@63218586, project.local.controller.sign.jwt.JWTFilter@6e475994, project.local.controller.sign.jwt.LoginFilter@55a2f08b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@750adad8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@752fecbf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a99744a, org.springframework.security.web.session.SessionManagementFilter@1e9f6095, org.springframework.security.web.access.ExceptionTranslationFilter@4d359c69, org.springframework.security.web.access.intercept.AuthorizationFilter@457d3f54]
+2024-04-29 16:25  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-29 16:25  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2024-04-29 16:25  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-29 16:25  INFO [project.local.LocalApplication] Started LocalApplication in 5.718 seconds (JVM running for 6.379)
+2024-04-29 16:25  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-29 16:25  INFO [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2024-04-29 16:25  INFO [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+2024-04-29 16:26  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on macdduck with PID 47136 (C:\GitHub\map-team-final-project\hello\back\JihoGivenchy-back-local\local\build\classes\java\main started by knh96 in C:\GitHub\map-team-final-project\hello\back\JihoGivenchy-back-local\local)
+2024-04-29 16:26  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-04-29 16:26  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29 16:26  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 79 ms. Found 4 JPA repository interfaces.
+2024-04-29 16:26  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-04-29 16:26  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-29 16:26  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-04-29 16:26  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-04-29 16:26  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-04-29 16:26  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1906 ms
+2024-04-29 16:26  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-29 16:26  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-04-29 16:26  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-04-29 16:26  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-04-29 16:26  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-04-29 16:26  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-04-29 16:26  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-04-29 16:26  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29 16:26  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5a08d301, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63e40188, org.springframework.security.web.context.SecurityContextPersistenceFilter@188b9a1e, org.springframework.security.web.header.HeaderWriterFilter@752fecbf, org.springframework.web.filter.CorsFilter@5b3c2a9f, org.springframework.security.web.authentication.logout.LogoutFilter@1d6dc2b8, project.local.controller.sign.jwt.JWTFilter@535b4dbf, project.local.controller.sign.jwt.LoginFilter@4f571c0e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d56c2d2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4cb59398, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c7cbc2d, org.springframework.security.web.session.SessionManagementFilter@73753326, org.springframework.security.web.access.ExceptionTranslationFilter@1b08d26f, org.springframework.security.web.access.intercept.AuthorizationFilter@2433bcd4]
+2024-04-29 16:26  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-29 16:26  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2024-04-29 16:26  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-29 16:26  INFO [project.local.LocalApplication] Started LocalApplication in 5.286 seconds (JVM running for 5.982)
+2024-04-29 16:26  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-29 16:26  INFO [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2024-04-29 16:26  INFO [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+2024-04-29 16:27  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on macdduck with PID 40616 (C:\GitHub\map-team-final-project\hello\back\JihoGivenchy-back-local\local\build\classes\java\main started by knh96 in C:\GitHub\map-team-final-project\hello\back\JihoGivenchy-back-local\local)
+2024-04-29 16:27  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-04-29 16:27  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29 16:27  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces.
+2024-04-29 16:27  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-04-29 16:27  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-29 16:27  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-04-29 16:27  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-04-29 16:27  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-04-29 16:27  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1898 ms
+2024-04-29 16:27  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-29 16:27  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-04-29 16:27  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-04-29 16:27  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-04-29 16:27  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-04-29 16:27  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-04-29 16:27  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-04-29 16:27  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29 16:27  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@22cf1808, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7156f8cf, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e111aeb, org.springframework.security.web.header.HeaderWriterFilter@2319c1e0, org.springframework.web.filter.CorsFilter@22349ad3, org.springframework.security.web.authentication.logout.LogoutFilter@43c3354, project.local.controller.sign.jwt.JWTFilter@42fdf45e, project.local.controller.sign.jwt.LoginFilter@1828ab51, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46ab8e4b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@600b3bee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e7ea81b, org.springframework.security.web.session.SessionManagementFilter@5f3c866c, org.springframework.security.web.access.ExceptionTranslationFilter@66cb9a63, org.springframework.security.web.access.intercept.AuthorizationFilter@ebbbe20]
+2024-04-29 16:27  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-29 16:27  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2024-04-29 16:27  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-29 16:27  INFO [project.local.LocalApplication] Started LocalApplication in 5.111 seconds (JVM running for 5.854)
+2024-04-29 16:27  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-29 16:27  INFO [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2024-04-29 16:27  INFO [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms

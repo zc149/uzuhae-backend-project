@@ -1,5 +1,6 @@
 package project.local.service.inter;
 
+import project.local.dto.local.LocalCardDTO;
 import project.local.dto.mydata.BillsDTO;
 import project.local.dto.mydata.BillsDetailsDTO;
 import project.local.dto.mydata.CardsDTO;
@@ -9,13 +10,13 @@ import project.local.dto.mypage.TimeAndTotalAmountDTO;
 import java.time.LocalDate;
 import java.util.List;
 
-    public interface UserService {
+public interface UserService {
 
-        Long findUser(Long id);
+    Long findUser(Long id);
 
-        List<String> findMyCardLists(List<CardsDTO> cards);
+    List<LocalCardDTO> findMyCardLists(List<CardsDTO> cards);
 
-        TimeAndTotalAmountDTO getTimeAndTotalAmount(List<BillsDTO> bills, LocalDate time);
+    TimeAndTotalAmountDTO getTimeAndTotalAmount(List<BillsDTO> bills, LocalDate time);
 
     SpentAmountDTO findSpentAmount(List<BillsDetailsDTO> billsDetails);
 
