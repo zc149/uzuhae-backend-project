@@ -1,11 +1,9 @@
 package project.local.entity.userInfo;
 
 import lombok.*;
-import project.local.entity.storeInfo.Store;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -43,6 +41,15 @@ public class User {
     @Column(name = "RESULT_PAY", nullable = true)
     private int resultPay;
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 }
