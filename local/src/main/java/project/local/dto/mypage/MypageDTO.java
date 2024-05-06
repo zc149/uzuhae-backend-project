@@ -3,6 +3,7 @@ package project.local.dto.mypage;
 import lombok.*;
 import project.local.dto.local.LocalCardDTO;
 import project.local.dto.mydata.SubscriptionDTO;
+import project.local.entity.userInfo.AnnualBenefits;
 
 import java.util.List;
 
@@ -20,5 +21,8 @@ public class MypageDTO {
     private List<LocalCardDTO> myCards;
 
     private String maxCategoryCode;
+
+    private AnnualBenefits annualBenefits;
+
 
 }
