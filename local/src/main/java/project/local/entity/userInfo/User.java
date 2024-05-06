@@ -42,6 +42,10 @@ public class User {
     @Column(name = "RESULT_PAY", nullable = true)
     private int resultPay;
 
+    @Builder.Default
+    @Column(name = "Grade", nullable = true)
+    private String grade = null;
+
 
 
     public void setPassword(String password) {
