@@ -1,16 +1,15 @@
 package project.local.entity.userInfo;
 
 import lombok.*;
-import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "ANNUALBENEFITS")
+@Table(name = "ANNUALDISCOUNT")
 @Getter
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class AnnualBenefits{
+public class AnnualDiscount {
 
     @Id
     @Column(name ="USER_ID")
@@ -33,5 +32,5 @@ public class AnnualBenefits{
 
     @Column(name = "TWELVE", nullable = true)
     private int twelve;
-    //d
+
 }
