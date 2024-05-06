@@ -1,11 +1,7 @@
-package project.local.dto.loginAndJoin;
+package project.local.dto.loginAndSingUp;
 
 import lombok.*;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
 import java.sql.Date;
 
 @Builder
@@ -16,7 +12,6 @@ import java.sql.Date;
 @AllArgsConstructor
 public class UserDTO {
 
-    @NonNull
     private Long id;
     private String password;
     private String nickName;
