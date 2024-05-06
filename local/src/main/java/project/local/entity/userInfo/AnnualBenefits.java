@@ -17,21 +17,21 @@ public class AnnualBenefits implements Serializable {
     @JoinColumn(name = "USER_ID", nullable = false)
     private User user;
 
-    @Column(name = "two", nullable = true)
+    @Column(name = "TWO", nullable = true)
     private int two;
 
-    @Column(name = "four", nullable = true)
+    @Column(name = "FOUR", nullable = true)
     private int four;
 
-    @Column(name = "six", nullable = true)
+    @Column(name = "SIX", nullable = true)
     private int six;
 
-    @Column(name = "eight", nullable = true)
+    @Column(name = "EIGHT", nullable = true)
     private int eight;
 
-    @Column(name = "ten", nullable = true)
+    @Column(name = "TEN", nullable = true)
     private int ten;
 
-    @Column(name = "twelve", nullable = true)
+    @Column(name = "TWELVE", nullable = true)
     private int twelve;
 }
