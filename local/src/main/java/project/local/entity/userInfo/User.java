@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -16,7 +17,6 @@ import java.sql.Date;
 public class User {
 
     @Id
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @Column(name = "USER_ID", nullable = false)
     private Long id;
 
@@ -41,6 +41,8 @@ public class User {
 
     @Column(name = "RESULT_PAY", nullable = true)
     private int resultPay;
+
+
 
     public void setPassword(String password) {
         this.password = password;

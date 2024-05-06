@@ -1,37 +1,37 @@
 package project.local.entity.userInfo;
 
 import lombok.*;
-
+import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
 @Table(name = "ANNUALBENEFITS")
-@AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Setter
-public class AnnualBenefits {
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+public class AnnualBenefits implements Serializable {
 
     @Id
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER_ID", nullable = false)
     private User user;
 
-    @Column(name = "2", nullable = true)
+    @Column(name = "two", nullable = true)
     private int two;
 
-    @Column(name = "4", nullable = true)
+    @Column(name = "four", nullable = true)
     private int four;
 
-    @Column(name = "6", nullable = true)
+    @Column(name = "six", nullable = true)
     private int six;
 
-    @Column(name = "8", nullable = true)
+    @Column(name = "eight", nullable = true)
     private int eight;
 
-    @Column(name = "10", nullable = true)
+    @Column(name = "ten", nullable = true)
     private int ten;
 
-    @Column(name = "12", nullable = true)
+    @Column(name = "twelve", nullable = true)
     private int twelve;
 }
