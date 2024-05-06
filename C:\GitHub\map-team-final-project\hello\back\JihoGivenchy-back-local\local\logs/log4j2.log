@@ -1,0 +1,689 @@
+2024-05-07 02:03  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on bagjihoui-MacBookPro.local with PID 41260 (/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main started by parkjiho in /Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local)
+2024-05-07 02:03  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-05-07 02:03  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 02:03  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 37 ms. Found 6 JPA repository interfaces.
+2024-05-07 02:03  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-05-07 02:03  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 02:03  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-05-07 02:03  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-05-07 02:03  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-05-07 02:03  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 807 ms
+2024-05-07 02:03  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 02:03  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-05-07 02:03  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 02:03  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-05-07 02:03  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-05-07 02:03  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 02:03  WARN [org.hibernate.mapping.RootClass] HHH000038: Composite-id class does not override equals(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:03  WARN [org.hibernate.mapping.RootClass] HHH000039: Composite-id class does not override hashCode(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:03  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 02:03  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:03  WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mypageController' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/controller/mypage/MypageController.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'annualBenefitsService' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'annualBenefitsService': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2024-05-07 02:03  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:03  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2024-05-07 02:03  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2024-05-07 02:03  INFO [org.apache.catalina.core.StandardService] Stopping service [Tomcat]
+2024-05-07 02:03  INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-07 02:03 ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   mypageController defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/controller/mypage/MypageController.class]
+┌─────┐
+|  annualBenefitsService defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2024-05-07 02:06  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on bagjihoui-MacBookPro.local with PID 41283 (/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main started by parkjiho in /Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local)
+2024-05-07 02:06  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-05-07 02:06  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 02:06  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 38 ms. Found 6 JPA repository interfaces.
+2024-05-07 02:06  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-05-07 02:06  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 02:06  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-05-07 02:06  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-05-07 02:06  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-05-07 02:06  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 792 ms
+2024-05-07 02:06  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 02:06  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-05-07 02:06  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 02:06  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-05-07 02:06  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-05-07 02:06  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 02:06  WARN [org.hibernate.mapping.RootClass] HHH000038: Composite-id class does not override equals(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:06  WARN [org.hibernate.mapping.RootClass] HHH000039: Composite-id class does not override hashCode(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:06  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 02:06  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:06  WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mypageController' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/controller/mypage/MypageController.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'annualBenefitsService' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'annualBenefitsService': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2024-05-07 02:06  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:06  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2024-05-07 02:06  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2024-05-07 02:06  INFO [org.apache.catalina.core.StandardService] Stopping service [Tomcat]
+2024-05-07 02:06  INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-07 02:06 ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   mypageController defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/controller/mypage/MypageController.class]
+┌─────┐
+|  annualBenefitsService defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2024-05-07 02:06  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on bagjihoui-MacBookPro.local with PID 41294 (/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main started by parkjiho in /Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local)
+2024-05-07 02:06  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-05-07 02:06  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 02:06  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 36 ms. Found 6 JPA repository interfaces.
+2024-05-07 02:06  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-05-07 02:06  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 02:06  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-05-07 02:06  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-05-07 02:06  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-05-07 02:06  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 801 ms
+2024-05-07 02:06  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 02:06  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-05-07 02:06  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 02:06  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-05-07 02:06  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-05-07 02:06  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 02:06  WARN [org.hibernate.mapping.RootClass] HHH000038: Composite-id class does not override equals(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:06  WARN [org.hibernate.mapping.RootClass] HHH000039: Composite-id class does not override hashCode(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:06  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 02:06  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:06  WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mypageController' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/controller/mypage/MypageController.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'annualBenefitsService' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'annualBenefitsService': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2024-05-07 02:06  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:06  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2024-05-07 02:06  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2024-05-07 02:06  INFO [org.apache.catalina.core.StandardService] Stopping service [Tomcat]
+2024-05-07 02:06  INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-07 02:06 ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   mypageController defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/controller/mypage/MypageController.class]
+┌─────┐
+|  annualBenefitsService defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2024-05-07 02:06  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on bagjihoui-MacBookPro.local with PID 41298 (/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main started by parkjiho in /Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local)
+2024-05-07 02:06  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-05-07 02:06  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 02:06  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 43 ms. Found 6 JPA repository interfaces.
+2024-05-07 02:06  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-05-07 02:06  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 02:06  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-05-07 02:06  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-05-07 02:06  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-05-07 02:06  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 995 ms
+2024-05-07 02:06  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 02:06  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-05-07 02:06  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 02:06  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-05-07 02:06  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-05-07 02:06  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 02:06  WARN [org.hibernate.mapping.RootClass] HHH000038: Composite-id class does not override equals(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:06  WARN [org.hibernate.mapping.RootClass] HHH000039: Composite-id class does not override hashCode(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:06  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 02:06  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:06  WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mypageController' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/controller/mypage/MypageController.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'annualBenefitsService' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'annualBenefitsService': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2024-05-07 02:06  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:06  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2024-05-07 02:06  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2024-05-07 02:06  INFO [org.apache.catalina.core.StandardService] Stopping service [Tomcat]
+2024-05-07 02:06  INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-07 02:06 ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   mypageController defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/controller/mypage/MypageController.class]
+┌─────┐
+|  annualBenefitsService defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2024-05-07 02:09  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on bagjihoui-MacBookPro.local with PID 41361 (/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main started by parkjiho in /Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local)
+2024-05-07 02:09  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-05-07 02:09  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 02:09  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 40 ms. Found 6 JPA repository interfaces.
+2024-05-07 02:09  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-05-07 02:09  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 02:09  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-05-07 02:09  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-05-07 02:09  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-05-07 02:09  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 799 ms
+2024-05-07 02:09  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 02:09  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-05-07 02:09  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 02:09  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-05-07 02:09  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-05-07 02:09  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 02:09  WARN [org.hibernate.mapping.RootClass] HHH000038: Composite-id class does not override equals(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:09  WARN [org.hibernate.mapping.RootClass] HHH000039: Composite-id class does not override hashCode(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:09  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 02:09  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:09  WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mypageController' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/controller/mypage/MypageController.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'annualBenefitsService' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'annualBenefitsService': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2024-05-07 02:09  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:09  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2024-05-07 02:09  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2024-05-07 02:09  INFO [org.apache.catalina.core.StandardService] Stopping service [Tomcat]
+2024-05-07 02:09  INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-07 02:09 ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   mypageController defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/controller/mypage/MypageController.class]
+┌─────┐
+|  annualBenefitsService defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2024-05-07 02:10  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on bagjihoui-MacBookPro.local with PID 41410 (/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main started by parkjiho in /Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local)
+2024-05-07 02:10  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-05-07 02:10  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 02:10  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 35 ms. Found 5 JPA repository interfaces.
+2024-05-07 02:10  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-05-07 02:10  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 02:10  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-05-07 02:10  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-05-07 02:10  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-05-07 02:10  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 795 ms
+2024-05-07 02:10  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 02:10  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-05-07 02:10  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 02:10  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-05-07 02:10  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-05-07 02:10  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 02:10  WARN [org.hibernate.mapping.RootClass] HHH000038: Composite-id class does not override equals(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:10  WARN [org.hibernate.mapping.RootClass] HHH000039: Composite-id class does not override hashCode(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:10  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 02:10  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:10  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5608e254, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d8b9dee, org.springframework.security.web.context.SecurityContextPersistenceFilter@5a6d4dee, org.springframework.security.web.header.HeaderWriterFilter@613ba54e, org.springframework.web.filter.CorsFilter@45cddfd3, org.springframework.security.web.authentication.logout.LogoutFilter@1a22325d, org.springframework.security.web.session.ConcurrentSessionFilter@762db992, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@705dc1a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ec52163, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40dc2ade, org.springframework.security.web.session.SessionManagementFilter@563bd6a4, org.springframework.security.web.access.ExceptionTranslationFilter@1028a747, org.springframework.security.web.access.intercept.AuthorizationFilter@5687ade6]
+2024-05-07 02:10  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-07 02:10  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2024-05-07 02:10  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-07 02:10  INFO [project.local.LocalApplication] Started LocalApplication in 2.959 seconds (JVM running for 3.457)
+2024-05-07 02:13  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:13  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2024-05-07 02:13  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2024-05-07 02:13  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on bagjihoui-MacBookPro.local with PID 41481 (/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main started by parkjiho in /Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local)
+2024-05-07 02:13  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-05-07 02:13  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 02:13  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 38 ms. Found 6 JPA repository interfaces.
+2024-05-07 02:13  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-05-07 02:13  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 02:13  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-05-07 02:13  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-05-07 02:13  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-05-07 02:13  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 789 ms
+2024-05-07 02:13  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 02:13  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-05-07 02:13  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 02:13  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-05-07 02:13  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-05-07 02:13  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 02:13  WARN [org.hibernate.mapping.RootClass] HHH000038: Composite-id class does not override equals(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:13  WARN [org.hibernate.mapping.RootClass] HHH000039: Composite-id class does not override hashCode(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:13  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 02:13  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:13  WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'annualBenefitsService' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'annualBenefitsRepository' defined in project.local.repository.AnnualBenefitsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+2024-05-07 02:13  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:13  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2024-05-07 02:13  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2024-05-07 02:13  INFO [org.apache.catalina.core.StandardService] Stopping service [Tomcat]
+2024-05-07 02:13  INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-07 02:13 ERROR [org.springframework.boot.SpringApplication] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'annualBenefitsService' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'annualBenefitsRepository' defined in project.local.repository.AnnualBenefitsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at project.local.LocalApplication.main(LocalApplication.java:10) ~[main/:?]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'annualBenefitsRepository' defined in project.local.repository.AnnualBenefitsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 19 more
+Caused by: java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+	at org.hibernate.metamodel.model.domain.internal.AbstractIdentifiableType.getIdClassAttributes(AbstractIdentifiableType.java:194) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation$IdMetadata.<init>(JpaMetamodelEntityInformation.java:274) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:89) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:233) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:182) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:165) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:76) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:325) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:231) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.util.Lazy.get(Lazy.java:115) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 19 more
+2024-05-07 02:17  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on bagjihoui-MacBookPro.local with PID 41588 (/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main started by parkjiho in /Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local)
+2024-05-07 02:17  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-05-07 02:17  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 02:17  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 39 ms. Found 6 JPA repository interfaces.
+2024-05-07 02:17  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-05-07 02:17  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 02:17  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-05-07 02:17  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-05-07 02:17  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-05-07 02:17  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 785 ms
+2024-05-07 02:17  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 02:17  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-05-07 02:17  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 02:17  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-05-07 02:17  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-05-07 02:17  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 02:17  WARN [org.hibernate.mapping.RootClass] HHH000038: Composite-id class does not override equals(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:17  WARN [org.hibernate.mapping.RootClass] HHH000039: Composite-id class does not override hashCode(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:17  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 02:17  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:17  WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'annualBenefitsService' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'annualBenefitsRepository' defined in project.local.repository.AnnualBenefitsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+2024-05-07 02:17  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:17  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2024-05-07 02:17  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2024-05-07 02:17  INFO [org.apache.catalina.core.StandardService] Stopping service [Tomcat]
+2024-05-07 02:17  INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-07 02:17 ERROR [org.springframework.boot.SpringApplication] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'annualBenefitsService' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'annualBenefitsRepository' defined in project.local.repository.AnnualBenefitsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at project.local.LocalApplication.main(LocalApplication.java:10) ~[main/:?]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'annualBenefitsRepository' defined in project.local.repository.AnnualBenefitsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 19 more
+Caused by: java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+	at org.hibernate.metamodel.model.domain.internal.AbstractIdentifiableType.getIdClassAttributes(AbstractIdentifiableType.java:194) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation$IdMetadata.<init>(JpaMetamodelEntityInformation.java:274) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:89) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:233) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:182) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:165) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:76) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:325) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:231) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.util.Lazy.get(Lazy.java:115) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 19 more
+2024-05-07 02:20  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on bagjihoui-MacBookPro.local with PID 41604 (/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main started by parkjiho in /Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local)
+2024-05-07 02:20  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-05-07 02:20  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 02:20  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 44 ms. Found 6 JPA repository interfaces.
+2024-05-07 02:20  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-05-07 02:20  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 02:20  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-05-07 02:20  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-05-07 02:20  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-05-07 02:20  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 814 ms
+2024-05-07 02:20  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 02:20  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-05-07 02:20  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 02:20  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-05-07 02:20  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-05-07 02:20  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 02:20  WARN [org.hibernate.mapping.RootClass] HHH000038: Composite-id class does not override equals(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:20  WARN [org.hibernate.mapping.RootClass] HHH000039: Composite-id class does not override hashCode(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:20  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 02:20  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:20  WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'annualBenefitsService' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'annualBenefitsRepository' defined in project.local.repository.AnnualBenefitsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+2024-05-07 02:20  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:20  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2024-05-07 02:20  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2024-05-07 02:20  INFO [org.apache.catalina.core.StandardService] Stopping service [Tomcat]
+2024-05-07 02:20  INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-07 02:20 ERROR [org.springframework.boot.SpringApplication] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'annualBenefitsService' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'annualBenefitsRepository' defined in project.local.repository.AnnualBenefitsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at project.local.LocalApplication.main(LocalApplication.java:10) ~[main/:?]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'annualBenefitsRepository' defined in project.local.repository.AnnualBenefitsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 19 more
+Caused by: java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+	at org.hibernate.metamodel.model.domain.internal.AbstractIdentifiableType.getIdClassAttributes(AbstractIdentifiableType.java:194) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation$IdMetadata.<init>(JpaMetamodelEntityInformation.java:274) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:89) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:233) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:182) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:165) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:76) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:325) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:231) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.util.Lazy.get(Lazy.java:115) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 19 more
+2024-05-07 02:22  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on bagjihoui-MacBookPro.local with PID 41638 (/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main started by parkjiho in /Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local)
+2024-05-07 02:22  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-05-07 02:22  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 02:22  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 37 ms. Found 6 JPA repository interfaces.
+2024-05-07 02:22  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-05-07 02:22  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 02:22  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-05-07 02:22  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-05-07 02:22  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-05-07 02:22  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 793 ms
+2024-05-07 02:22  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 02:22  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-05-07 02:22  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 02:22  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-05-07 02:22  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-05-07 02:22  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 02:22  WARN [org.hibernate.mapping.RootClass] HHH000038: Composite-id class does not override equals(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:22  WARN [org.hibernate.mapping.RootClass] HHH000039: Composite-id class does not override hashCode(): project.local.entity.userInfo.AnnualBenefits
+2024-05-07 02:22  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 02:22  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:22  WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'annualBenefitsService' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'annualBenefitsRepository' defined in project.local.repository.AnnualBenefitsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+2024-05-07 02:22  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:22  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2024-05-07 02:22  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2024-05-07 02:22  INFO [org.apache.catalina.core.StandardService] Stopping service [Tomcat]
+2024-05-07 02:22  INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-07 02:22 ERROR [org.springframework.boot.SpringApplication] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'annualBenefitsService' defined in file [/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main/project/local/service/AnnualBenefitsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'annualBenefitsRepository' defined in project.local.repository.AnnualBenefitsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at project.local.LocalApplication.main(LocalApplication.java:10) ~[main/:?]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'annualBenefitsRepository' defined in project.local.repository.AnnualBenefitsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 19 more
+Caused by: java.lang.IllegalArgumentException: This class [class project.local.entity.userInfo.AnnualBenefits] does not define an IdClass
+	at org.hibernate.metamodel.model.domain.internal.AbstractIdentifiableType.getIdClassAttributes(AbstractIdentifiableType.java:194) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation$IdMetadata.<init>(JpaMetamodelEntityInformation.java:274) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:89) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:233) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:182) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:165) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:76) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:325) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:231) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.util.Lazy.get(Lazy.java:115) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329) ~[spring-data-commons-2.7.6.jar:2.7.6]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.7.6.jar:2.7.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 19 more
+2024-05-07 02:23  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on bagjihoui-MacBookPro.local with PID 41662 (/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main started by parkjiho in /Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local)
+2024-05-07 02:23  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-05-07 02:23  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 02:23  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 35 ms. Found 6 JPA repository interfaces.
+2024-05-07 02:23  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-05-07 02:23  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 02:23  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-05-07 02:23  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-05-07 02:23  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-05-07 02:23  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 793 ms
+2024-05-07 02:23  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 02:23  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-05-07 02:23  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 02:23  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-05-07 02:23  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-05-07 02:23  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 02:23  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 02:23  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:23  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@41e43885, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4131261, org.springframework.security.web.context.SecurityContextPersistenceFilter@66c32e15, org.springframework.security.web.header.HeaderWriterFilter@6b64921f, org.springframework.web.filter.CorsFilter@193c3b1c, org.springframework.security.web.authentication.logout.LogoutFilter@235dacd7, org.springframework.security.web.session.ConcurrentSessionFilter@54c17a2b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@304704ae, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75b25ec3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43d84df1, org.springframework.security.web.session.SessionManagementFilter@5b3c2a9f, org.springframework.security.web.access.ExceptionTranslationFilter@1da61a29, org.springframework.security.web.access.intercept.AuthorizationFilter@6334c0d8]
+2024-05-07 02:23  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-07 02:23  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2024-05-07 02:23  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-07 02:23  INFO [project.local.LocalApplication] Started LocalApplication in 3.085 seconds (JVM running for 3.596)
+2024-05-07 02:26  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:26  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2024-05-07 02:26  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2024-05-07 02:26  INFO [project.local.LocalApplication] Starting LocalApplication using Java 11.0.21 on bagjihoui-MacBookPro.local with PID 41718 (/Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local/local/build/classes/java/main started by parkjiho in /Users/parkjiho/Desktop/woori_finalproject_document/back_local/JihoGivenchy-back-local)
+2024-05-07 02:26  INFO [project.local.LocalApplication] No active profile set, falling back to 1 default profile: "default"
+2024-05-07 02:26  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 02:26  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 38 ms. Found 6 JPA repository interfaces.
+2024-05-07 02:26  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2024-05-07 02:26  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 02:26  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2024-05-07 02:26  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-05-07 02:26  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2024-05-07 02:26  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 787 ms
+2024-05-07 02:26  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 02:26  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-05-07 02:26  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 02:26  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2024-05-07 02:26  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2024-05-07 02:26  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 02:26  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 02:26  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 02:26  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2932721e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a6d4dee, org.springframework.security.web.context.SecurityContextPersistenceFilter@c7cbc2d, org.springframework.security.web.header.HeaderWriterFilter@3fc7abf6, org.springframework.web.filter.CorsFilter@6447dc25, org.springframework.security.web.authentication.logout.LogoutFilter@27422187, org.springframework.security.web.session.ConcurrentSessionFilter@75d9b73c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f919230, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54c17a2b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@705dc1a6, org.springframework.security.web.session.SessionManagementFilter@47cf922d, org.springframework.security.web.access.ExceptionTranslationFilter@8de8b07, org.springframework.security.web.access.intercept.AuthorizationFilter@71e9640]
+2024-05-07 02:26  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-07 02:26  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2024-05-07 02:26  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-07 02:26  INFO [project.local.LocalApplication] Started LocalApplication in 3.059 seconds (JVM running for 3.56)

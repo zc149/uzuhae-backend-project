@@ -10,12 +10,11 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class AnnualBenefits implements Serializable {
+public class AnnualBenefits{
 
     @Id
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "USER_ID", nullable = false)
-    private User user;
+    @Column(name ="USER_ID")
+    private Long id;
 
     @Column(name = "TWO", nullable = true)
     private int two;
