@@ -16,6 +16,7 @@ import java.sql.Date;
 public class User {
 
     @Id
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @Column(name = "USER_ID", nullable = false)
     private Long id;
 
