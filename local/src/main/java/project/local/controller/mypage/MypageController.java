@@ -11,8 +11,9 @@ import project.local.dto.mydata.CardsDTO;
 import project.local.dto.mypage.MypageDTO;
 import project.local.dto.mypage.SpentAmountDTO;
 import project.local.dto.mypage.TimeAndTotalAmountDTO;
-import project.local.entity.userInfo.AnnualBenefits;
 //import project.local.service.AnnualBenefitsService;
+import project.local.entity.userInfo.AnnualDiscount;
+import project.local.service.AnnualDiscountService;
 import project.local.service.MyDataServiceImpl;
 import project.local.service.UserServiceImpl;
 
@@ -27,7 +28,7 @@ public class MypageController {
 
     private final MyDataServiceImpl myDataService;
     private final UserServiceImpl userService;
-//    private final AnnualBenefitsService annualBenefitsService;
+    private final AnnualDiscountService annualDiscountService;
     LocalDate now = LocalDate.now();
 
     @GetMapping("/{userId}")
@@ -52,7 +53,7 @@ public class MypageController {
 
         String categoryCodeFromValue = userService.getCategoryCodeFromValue(spentAmount.getMaxCategoryValue());
 
-//        AnnualBenefits annualBenefits = annualBenefitsService.findById(id);
+        AnnualDiscount annualDiscount = annualDiscountService.findById(id);
 
 
         return MypageDTO.builder()
@@ -60,7 +61,7 @@ public class MypageController {
                 .spentAmountDTO(spentAmount)
                 .myCards(myCards)
                 .maxCategoryCode(categoryCodeFromValue)
-//                .annualBenefits(annualBenefits)
+                .annualDiscount(annualDiscount)
                 .build();
     }
 
