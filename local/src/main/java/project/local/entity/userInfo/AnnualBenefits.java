@@ -33,4 +33,5 @@ public class AnnualBenefits{
 
     @Column(name = "TWELVE", nullable = true)
     private int twelve;
+    //d
 }
