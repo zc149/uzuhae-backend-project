@@ -19,6 +19,7 @@ import project.local.entity.userInfo.AnnualDiscount;
 import project.local.service.AnnualDiscountService;
 import project.local.service.MyDataServiceImpl;
 import project.local.service.UserServiceImpl;
+import project.local.service.inter.MyDataService;
 
 import javax.servlet.http.HttpSession;
 import java.time.LocalDate;
@@ -29,6 +30,8 @@ import java.util.List;
 @RequestMapping("/universe/mypage")
 @RequiredArgsConstructor
 public class MypageController {
+
+//    private final MyDataService myDataService;
 
     private final MyDataServiceImpl myDataService;
     private final UserServiceImpl userService;

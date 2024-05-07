@@ -19,4 +19,6 @@ public class UserDTO {
     private Date joinDate;
     private String role;
 
+    private String grade;
+
 }
