@@ -69,14 +69,18 @@ public class MypageController {
         }
     }
 
-    @GetMapping("/update/{userId}")
-    public UserDTO findForUpdate(@PathVariable("userId") Long id) {
-        return userService.findForUpdate(id);
+    @GetMapping("/update")
+    public ResponseEntity<UserDTO> findForUpdate(HttpSession session) {
+
+        CustomUserDetails sessionUser = (CustomUserDetails) session.getAttribute("USER");
+        Long userId = Long.valueOf(sessionUser.getUsername());
+
+        UserDTO userDTO = userService.findForUpdate(userId);
+        return ResponseEntity.ok(userDTO);
     }
 
-    @PostMapping("/update/{userId}")
+    @PostMapping("/update")
     public void updateUser(@RequestBody UserDTO userDTO) {
-        System.out.println("userDTO = " + userDTO);
         userService.updateUser(userDTO);
     }
 }

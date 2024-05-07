@@ -45,6 +45,9 @@ public class User {
     @Column(name = "Grade", nullable = true)
     private String grade;
 
+    @Version
+    private Long version;
+
     public void setPassword(String password) {
         this.password = password;
     }
