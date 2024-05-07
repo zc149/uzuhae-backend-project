@@ -31,8 +31,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MypageController {
 
-//    private final MyDataService myDataService;
-
     private final MyDataServiceImpl myDataService;
     private final UserServiceImpl userService;
     private final AnnualDiscountService annualDiscountService;
@@ -41,15 +39,10 @@ public class MypageController {
     @GetMapping
     public ResponseEntity<?> getMypageData(HttpSession session) {
         // 세션에서 사용자 정보를 가져옵니다.
-        UserDetails sessionUser = (CustomUserDetails) session.getAttribute("USER");
-        System.out.println(sessionUser.getUsername());
-        // 세션에서 사용자 ID를 추출합니다.
-        Long userId = sessionUser != null ? Long.valueOf(sessionUser.getUsername()) : null;
+        CustomUserDetails sessionUser = (CustomUserDetails) session.getAttribute("USER");
 
-        if (userId == null) {
-            // 로그인하지 않았거나 세션에서 사용자 정보를 가져올 수 없는 경우
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Unauthorized");
-        }
+        // 세션에서 사용자 ID를 추출합니다.
+        Long userId = Long.valueOf(sessionUser.getUsername());
 
         try {
             List<CardsDTO> cards = myDataService.requestCards(userId);
@@ -71,7 +64,6 @@ public class MypageController {
 
             return ResponseEntity.ok(myPageDTO);
         } catch (Exception e) {
-            // 예외 처리
             log.error("Mypage data retrieval failed", e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Internal Server Error");
         }
