@@ -17,7 +17,6 @@ public class SignUpController {
 
     @PostMapping
     public void signUp(@RequestBody UserDTO userDTO) {
-        System.out.println(userDTO.getId());
         signUpService.signUp(userDTO);
     }
 

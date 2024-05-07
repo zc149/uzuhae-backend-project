@@ -39,15 +39,10 @@ public class MypageController {
     @GetMapping
     public ResponseEntity<?> getMypageData(HttpSession session) throws IOException, InterruptedException {
         // 세션에서 사용자 정보를 가져옵니다.
-        UserDetails sessionUser = (CustomUserDetails) session.getAttribute("USER");
-        System.out.println(sessionUser.getUsername());
-        // 세션에서 사용자 ID를 추출합니다.
-        Long userId = sessionUser != null ? Long.valueOf(sessionUser.getUsername()) : null;
+        CustomUserDetails sessionUser = (CustomUserDetails) session.getAttribute("USER");
 
-        if (userId == null) {
-            // 로그인하지 않았거나 세션에서 사용자 정보를 가져올 수 없는 경우
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Unauthorized");
-        }
+        // 세션에서 사용자 ID를 추출합니다.
+        Long userId = Long.valueOf(sessionUser.getUsername());
 
         List<CardsDTO> cards = myDataService.requestCards(userId);
         List<BillsDTO> bills = myDataService.requestBills(userId);
@@ -69,14 +64,18 @@ public class MypageController {
         return ResponseEntity.ok(myPageDTO);
     }
 
-    @GetMapping("/update/{userId}")
-    public UserDTO findForUpdate(@PathVariable("userId") Long id) {
-        return userService.findForUpdate(id);
+    @GetMapping("/update")
+    public ResponseEntity<UserDTO> findForUpdate(HttpSession session) {
+
+        CustomUserDetails sessionUser = (CustomUserDetails) session.getAttribute("USER");
+        Long userId = Long.valueOf(sessionUser.getUsername());
+
+        UserDTO userDTO = userService.findForUpdate(userId);
+        return ResponseEntity.ok(userDTO);
     }
 
-    @PostMapping("/update/{userId}")
+    @PostMapping("/update")
     public void updateUser(@RequestBody UserDTO userDTO) {
-        System.out.println("userDTO = " + userDTO);
         userService.updateUser(userDTO);
     }
 }
