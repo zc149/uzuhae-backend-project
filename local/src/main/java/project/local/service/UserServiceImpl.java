@@ -47,6 +47,13 @@ public class UserServiceImpl implements UserService {
         return userId;
     }
 
+
+    public User findById(Long id) {
+        User user = userRepository.findById(id).orElse(null);
+
+        return user;
+    }
+
     @Override
     public List<LocalCardDTO> findMyCardLists(List<CardsDTO> cards) {
         List<LocalCardDTO> myCards = new ArrayList<>();

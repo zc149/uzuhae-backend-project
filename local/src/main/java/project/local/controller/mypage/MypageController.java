@@ -16,6 +16,7 @@ import project.local.dto.mypage.MypageDTO;
 import project.local.dto.mypage.SpentAmountDTO;
 import project.local.dto.mypage.TimeAndTotalAmountDTO;
 import project.local.entity.userInfo.AnnualDiscount;
+import project.local.entity.userInfo.User;
 import project.local.service.AnnualDiscountService;
 import project.local.service.MyDataServiceImpl;
 import project.local.service.UserServiceImpl;
@@ -52,6 +53,7 @@ public class MypageController {
         SpentAmountDTO spentAmount = userService.findSpentAmount(billsDetails);
         String categoryCodeFromValue = userService.getCategoryCodeFromValue(spentAmount.getMaxCategoryValue());
         AnnualDiscount annualDiscount = annualDiscountService.findById(userId);
+        User user = userService.findById(userId);
 
         MypageDTO myPageDTO = MypageDTO.builder()
                 .timeAndTotalAmountDTO(timeAndTotalAmountDTO)
@@ -59,6 +61,7 @@ public class MypageController {
                 .myCards(myCards)
                 .maxCategoryCode(categoryCodeFromValue)
                 .annualDiscount(annualDiscount)
+                .user(user)
                 .build();
 
         return ResponseEntity.ok(myPageDTO);

@@ -24,7 +24,7 @@ public class LoginController {
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @PostMapping
-    public ResponseEntity<String> login(@RequestBody UserDTO userDTO, HttpServletRequest request){
+    public ResponseEntity<?> login(@RequestBody UserDTO userDTO, HttpServletRequest request){
         CustomUserDetails userDetails = (CustomUserDetails) customUserDetailService.loadUserByUsername(String.valueOf(userDTO.getId()));
 
         if (bCryptPasswordEncoder.matches(userDTO.getPassword(), userDetails.getPassword())){
@@ -36,11 +36,11 @@ public class LoginController {
             HttpSession session = request.getSession();
             session.setAttribute("USER", userDetails); // 여기서 "USER"는 사용자 정보를 저장하는 키입니다.
             String sessionId = session.getId();
+//            userDetails.getNickName();
 
-            String nickName = userDetails.getNickName();
 
             // 성공 로직 처리 (예: 토큰 발급 등)
-            return ResponseEntity.ok().header("Set-Cookie", "SESSIONID=" + sessionId + "; Path=/; HttpOnly").body(nickName);
+            return ResponseEntity.ok().header("Set-Cookie", "SESSIONID=" + sessionId + "; Path=/; HttpOnly").body(userDetails.getNickName());
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("login failure");
         }

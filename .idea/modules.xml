@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/JihoGivenchy-back-local.iml" filepath="$PROJECT_DIR$/.idea/JihoGivenchy-back-local.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/local.main.iml" filepath="$PROJECT_DIR$/.idea/modules/local.main.iml" />
     </modules>
   </component>
 </project>

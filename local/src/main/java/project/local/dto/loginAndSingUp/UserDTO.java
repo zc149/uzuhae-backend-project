@@ -1,6 +1,7 @@
 package project.local.dto.loginAndSingUp;
 
 import lombok.*;
+import project.local.entity.userInfo.AnnualDiscount;
 
 import java.sql.Date;
 
