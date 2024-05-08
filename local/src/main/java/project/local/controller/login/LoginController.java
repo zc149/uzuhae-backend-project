@@ -8,6 +8,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+import project.local.dto.loginAndSingUp.CustomUserDetails;
 import project.local.dto.loginAndSingUp.UserDTO;
 import project.local.service.CustomUserDetailService;
 
@@ -24,7 +25,7 @@ public class LoginController {
 
     @PostMapping
     public ResponseEntity<String> login(@RequestBody UserDTO userDTO, HttpServletRequest request){
-        UserDetails userDetails = customUserDetailService.loadUserByUsername(String.valueOf(userDTO.getId()));
+        CustomUserDetails userDetails = (CustomUserDetails) customUserDetailService.loadUserByUsername(String.valueOf(userDTO.getId()));
 
         if (bCryptPasswordEncoder.matches(userDTO.getPassword(), userDetails.getPassword())){
             // 세션 생성
@@ -36,8 +37,10 @@ public class LoginController {
             session.setAttribute("USER", userDetails); // 여기서 "USER"는 사용자 정보를 저장하는 키입니다.
             String sessionId = session.getId();
 
+            String nickName = userDetails.getNickName();
+
             // 성공 로직 처리 (예: 토큰 발급 등)
-            return ResponseEntity.ok().header("Set-Cookie", "SESSIONID=" + sessionId + "; Path=/; HttpOnly").body("login success");
+            return ResponseEntity.ok().header("Set-Cookie", "SESSIONID=" + sessionId + "; Path=/; HttpOnly").body(nickName);
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("login failure");
         }
